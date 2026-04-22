@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { AlternatingTitle } from "@/components/ui/AlternatingTitle";
 import contactData from "@/data/contact.json";
+import SubPageFooter from "@/components/layout/SubPageFooter";
 import s from "./SocialCard.module.css";
 
 /* ── Types ── */
@@ -461,6 +462,8 @@ export default function ContactPage() {
 
           </div>
         </section>
+
+      <SubPageFooter />
       </div>
     </>
   );

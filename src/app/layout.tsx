@@ -5,7 +5,6 @@ import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import Navbar from "@/components/layout/Navbar";
 import GlobalBackground from "@/components/ui/GlobalBackground";
 import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
-import SubPageFooter from "@/components/layout/SubPageFooter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,7 +47,6 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>
-          <SubPageFooter />
         </SmoothScrollProvider>
       </body>
     </html>

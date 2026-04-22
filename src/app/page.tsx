@@ -6,6 +6,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import MarqueeSection from "@/components/sections/MarqueeSection";
 import HorizontalScrollSection from "@/components/sections/HorizontalScrollSection";
 import CTASection from "@/components/sections/CTASection";
+import SubPageFooter from "@/components/layout/SubPageFooter";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
       <MarqueeSection />
       <HorizontalScrollSection />
       <CTASection />
+      <SubPageFooter />
     </motion.div>
   );
 }

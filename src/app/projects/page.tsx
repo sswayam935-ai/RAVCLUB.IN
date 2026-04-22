@@ -10,6 +10,7 @@ import {
 import projectsData from "@/data/projects.json";
 import { AlternatingTitle } from "@/components/ui/AlternatingTitle";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import SubPageFooter from "@/components/layout/SubPageFooter";
 import s from "./ProjectCard.module.css";
 
 type Project = (typeof projectsData.projects)[number];
@@ -245,6 +246,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      <SubPageFooter />
     </div>
   );
 }
