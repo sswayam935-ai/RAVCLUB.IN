@@ -41,6 +41,7 @@ const panels = [
 ];
 
 const N = panels.length;
+const SCROLL_END = 0.75; // horizontal scroll completes at 75%, rest is dwell time on last panel
 
 /* ── Individual panel — owns its scroll-driven entrance animation ── */
 function Panel({
@@ -52,20 +53,20 @@ function Panel({
   index: number;
   scrollYProgress: MotionValue<number>;
 }) {
-  const enter = index / (N - 1);
+  const enter = (index / (N - 1)) * SCROLL_END;
   const opacity = useTransform(
     scrollYProgress,
-    [enter - 0.18, enter - 0.05, enter + 0.25],
+    [enter - 0.14, enter - 0.04, enter + 0.2],
     [0, 1, 1]
   );
   const y = useTransform(
     scrollYProgress,
-    [enter - 0.18, enter - 0.05],
+    [enter - 0.14, enter - 0.04],
     [40, 0]
   );
   const lineW = useTransform(
     scrollYProgress,
-    [enter - 0.1, enter + 0.1],
+    [enter - 0.08, enter + 0.08],
     ["0%", "100%"]
   );
 
@@ -155,10 +156,10 @@ export default function HorizontalScrollSection() {
     offset: ["start start", "end start"],
   });
 
-  /* translate X: 0vw → -(N-1)*100vw */
+  /* translate X: 0vw → -(N-1)*100vw — finishes early to give last panel dwell time */
   const x = useTransform(
     scrollYProgress,
-    [0, 1],
+    [0, SCROLL_END],
     ["0vw", `${-(N - 1) * 100}vw`]
   );
 
@@ -166,14 +167,14 @@ export default function HorizontalScrollSection() {
   const dotProgress = (i: number) =>
     useTransform(
       scrollYProgress,
-      [i / N - 0.08, i / N + 0.08],
+      [(i / N) * SCROLL_END - 0.06, (i / N) * SCROLL_END + 0.06],
       [0.25, 1]
     );
 
   return (
     <section
       ref={containerRef}
-      style={{ height: `${N * 100}vh` }}
+      style={{ height: `${(N + 1) * 100}vh` }}
       className="relative"
     >
       {/* Sticky viewport */}
