@@ -39,7 +39,7 @@ export function AlternatingTitle({
           }}
         >
           <motion.span
-            style={{ display: "inline-block" }}
+            style={{ display: "inline-block", ...(color ? { color } : {}) }}
             initial={{ x: i % 2 === 0 ? "-110%" : "110%", opacity: 0 }}
             animate={{ x: "0%", opacity: 1 }}
             transition={{
