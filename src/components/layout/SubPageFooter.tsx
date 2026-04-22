@@ -42,7 +42,7 @@ export default function SubPageFooter({ pageName }: SubPageFooterProps) {
             className="font-mono uppercase mb-10"
             style={{ fontSize: "0.625rem", letterSpacing: "0.28em", color: "rgba(154,128,112,0.38)" }}
           >
-            Est. 2019 — Engineering Tomorrow, Today.
+            Est. 2022 — Engineering Tomorrow, Today.
           </p>
           <ul className="flex flex-col gap-2.5">
             {["roboticsavclub@school.edu", "@roboticsavclub", "Engineering Block, Room 204"].map((item) => (

@@ -47,7 +47,7 @@ export default function HeroSection() {
         >
           <span className="h-px w-12 bg-accent-cyan/50" />
           <span className="font-mono text-xs tracking-[0.3em] uppercase text-accent-cyan">
-            Est. 2019
+            Est. 2022
           </span>
           <span className="h-px w-12 bg-accent-cyan/50" />
         </motion.div>
