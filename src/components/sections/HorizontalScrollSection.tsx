@@ -88,10 +88,9 @@ function Panel({
 
       {/* Panel number */}
       <motion.span
-        style={{ opacity }}
+        style={{ opacity, color: "rgba(154,128,112,0.45)" }}
         className="font-mono text-xs tracking-[0.4em] uppercase mb-8 block"
         aria-hidden
-        css={{ color: "rgba(154,128,112,0.45)" }}
       >
         <span style={{ color: "rgba(154,128,112,0.5)" }}>
           {panel.number} &mdash; {String(N).padStart(2, "0")}
@@ -101,9 +100,8 @@ function Panel({
       {/* Big word */}
       <div style={{ overflow: "hidden" }}>
         <motion.h2
-          style={{ opacity, y, color: panel.accent }}
+          style={{ opacity, y, color: panel.accent, letterSpacing: "-0.04em" }}
           className="font-display font-black leading-none block"
-          css={{ letterSpacing: "-0.04em" }}
           aria-label={panel.word}
         >
           <span
@@ -130,9 +128,8 @@ function Panel({
 
       {/* Description */}
       <motion.p
-        style={{ opacity, y }}
+        style={{ opacity, y, color: "#9A8070" }}
         className="font-body text-base md:text-lg leading-relaxed max-w-md"
-        style2={{ color: "#9A8070" }}
       >
         <span style={{ color: "#9A8070" }}>{panel.desc}</span>
       </motion.p>
@@ -218,7 +215,6 @@ export default function HorizontalScrollSection() {
               style={{ opacity: dotProgress(i), scale: dotProgress(i) }}
               className="rounded-full"
               aria-hidden
-              css2={{ background: p.accent }}
             >
               <div
                 style={{
