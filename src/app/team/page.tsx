@@ -252,7 +252,7 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <SubPageFooter pageName="UNITY" />
+      <SubPageFooter />
     </div>
   );
 }

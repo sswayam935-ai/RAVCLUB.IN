@@ -305,7 +305,7 @@ export default function AchievementsPage() {
         </div>
       </section>
 
-      <SubPageFooter pageName="LEGACY" />
+      <SubPageFooter />
     </div>
   );
 }
