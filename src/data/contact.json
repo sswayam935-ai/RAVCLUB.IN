@@ -1,0 +1,71 @@
+﻿{
+  "_readme": "Edit this file to configure the contact page. Change googleScriptUrl to your deployed Apps Script Web App URL after setup.",
+
+  "googleScriptUrl": "https://script.google.com/macros/s/AKfycbx_iH9n0XXPg641xJqfWemTOg9o-oP-6IijfB_709Ls3Idbu9UptfQib-sG_DQs7mo/exec",
+
+  "hero": {
+    "eyebrow": "Join Us",
+    "heading": "Contact Us",
+    "subheading": "Reach out, follow our journey, or just say hello."
+  },
+
+  "infoItems": [
+    { "icon": "✉", "label": "Email",     "value": "roboticsavclub@school.edu",    "color": "#C0E1D2" },
+    { "icon": "◈", "label": "Instagram", "value": "@roboticsavclub",              "color": "#DC9B9B" },
+    { "icon": "⌖", "label": "Location",  "value": "Engineering Block, Room 204",  "color": "#7BB5A0" }
+  ],
+
+  "form": {
+    "heading": "Join the Club",
+    "submitLabel": "Send Message →",
+    "successMessage": "Thanks! We will get back to you soon.",
+    "errorMessage": "Something went wrong. Please try again.",
+    "fields": {
+      "name":       { "label": "Full Name",    "placeholder": "Your name"            },
+      "email":      { "label": "Email",        "placeholder": "you@school.edu"       },
+      "department": {
+        "label": "Interested In",
+        "placeholder": "Select a department",
+        "options": ["Robotics", "AV Production", "Software and AI", "Automation", "General / Unsure"]
+      },
+      "message":    { "label": "Message",      "placeholder": "Tell us why you want to join" }
+    }
+  },
+
+  "socialCards": [
+    {
+      "title": "INSTAGRAM",
+      "color": "#C0E1D2",
+      "darkColor": "rgba(22,60,48,0.96)",
+      "glowColor": "rgba(192,225,210,0.9)",
+      "links": [
+        { "href": "https://instagram.com/roboticsavclub",        "label": "Instagram" },
+        { "href": "mailto:roboticsavclub@school.edu",            "label": "Email"     },
+        { "href": "#",                                            "label": "LinkedIn"  }
+      ]
+    },
+    {
+      "title": "X / TWITTER",
+      "color": "#DC9B9B",
+      "darkColor": "rgba(76,20,20,0.96)",
+      "glowColor": "rgba(220,155,155,0.9)",
+      "isMiddle": true,
+      "links": [
+        { "href": "https://instagram.com/roboticsavclub",        "label": "Instagram", "hoverTitle": "INSTAGRAM"   },
+        { "href": "https://twitter.com/roboticsavclub",          "label": "Twitter",   "hoverTitle": "X / TWITTER" },
+        { "href": "https://linkedin.com/company/roboticsavclub", "label": "LinkedIn",  "hoverTitle": "LINKEDIN"    }
+      ]
+    },
+    {
+      "title": "LINKEDIN",
+      "color": "#7BB5A0",
+      "darkColor": "rgba(18,50,42,0.96)",
+      "glowColor": "rgba(123,181,160,0.9)",
+      "links": [
+        { "href": "https://instagram.com/roboticsavclub",        "label": "Instagram" },
+        { "href": "https://twitter.com/roboticsavclub",          "label": "Twitter"   },
+        { "href": "https://linkedin.com/company/roboticsavclub", "label": "LinkedIn"  }
+      ]
+    }
+  ]
+}

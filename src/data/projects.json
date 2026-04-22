@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "heading": "PROJECTS",
+    "subheading": "Ideas turned into real, working systems — from robots to visual productions."
+  },
+  "categories": [
+    "All",
+    "Robotics",
+    "Software",
+    "AV Production",
+    "IoT",
+    "AI/ML"
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Autonomous Waste",
+      "category": "Robotics",
+      "year": "2024",
+      "status": "Completed",
+      "description": "A fully autonomous robot that uses computer vision to identify and sort recyclable waste from general waste in real time.",
+      "tech": [
+        "Python",
+        "OpenCV",
+        "Arduino",
+        "Servo Motors",
+        "Raspberry Pi"
+      ],
+      "highlight": true,
+      "image": "/projects/waste-sorter.jpg",
+      "color": "#00E5FF"
+    },
+    {
+      "id": "proj-2",
+      "title": "Smart Classroom Automation",
+      "category": "IoT",
+      "year": "2023",
+      "status": "Completed",
+      "description": "IoT-based classroom system that auto-controls lights, fans, and projectors based on occupancy and schedule.",
+      "tech": [
+        "ESP32",
+        "MQTT",
+        "Node-RED",
+        "Raspberry Pi",
+        "Python"
+      ],
+      "highlight": true,
+      "image": "/projects/smart-classroom.jpg",
+      "color": "#1AFF8C"
+    },
+    {
+      "id": "proj-3",
+      "title": "Annual Day Highlight Film",
+      "category": "AV Production",
+      "year": "2024",
+      "status": "Completed",
+      "description": "4K multicam production and cinematic highlight film of the School Annual Day 2024, viewed by 5000+ people.",
+      "tech": [
+        "Sony A7IV",
+        "DaVinci Resolve",
+        "DJI Drone",
+        "Premiere Pro"
+      ],
+      "highlight": false,
+      "image": "/projects/annual-day.jpg",
+      "color": "#FF6B00"
+    },
+    {
+      "id": "proj-4",
+      "title": "Line-Following Competition Bot",
+      "category": "Robotics",
+      "year": "2023",
+      "status": "Completed",
+      "description": "High-speed line-following robot with PID control, built and optimized for state-level competition tracks.",
+      "tech": [
+        "Arduino Mega",
+        "IR Sensors",
+        "PID Control",
+        "C++"
+      ],
+      "highlight": false,
+      "image": "/projects/line-follower.jpg",
+      "color": "#00E5FF"
+    },
+    {
+      "id": "proj-5",
+      "title": "Face Recognition Attendance",
+      "category": "AI/ML",
+      "year": "2023",
+      "status": "Completed",
+      "description": "AI-powered attendance management system using face recognition, integrated with a web dashboard.",
+      "tech": [
+        "Python",
+        "FaceNet",
+        "Flask",
+        "React",
+        "SQLite"
+      ],
+      "highlight": true,
+      "image": "/projects/face-recognition.jpg",
+      "color": "#1AFF8C"
+    },
+    {
+      "id": "proj-6",
+      "title": "Terrain Rover",
+      "category": "Robotics",
+      "year": "2022",
+      "status": "Completed",
+      "description": "Remote-controlled 6-wheel terrain rover with live video feed, designed for rough surface navigation.",
+      "tech": [
+        "Raspberry Pi",
+        "RF Control",
+        "FPV Camera",
+        "Python"
+      ],
+      "highlight": false,
+      "image": "/projects/terrain-rover.jpg",
+      "color": "#FF6B00"
+    },
+    {
+      "id": "proj-7",
+      "title": "Club Management Web App",
+      "category": "Software",
+      "year": "2024",
+      "status": "In Progress",
+      "description": "A full-stack web app for managing club members, projects, events, and inventory with role-based access.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Prisma",
+        "TailwindCSS"
+      ],
+      "highlight": false,
+      "image": "/projects/club-app.jpg",
+      "color": "#00E5FF"
+    },
+    {
+      "id": "proj-8",
+      "title": "Science Day Promo Film",
+      "category": "AV Production",
+      "year": "2022",
+      "status": "Completed",
+      "description": "Promotional short film for National Science Day showcasing student projects and lab activities.",
+      "tech": [
+        "Premiere Pro",
+        "After Effects",
+        "Motion Graphics"
+      ],
+      "highlight": false,
+      "image": "/projects/science-day.jpg",
+      "color": "#FF6B00"
+    }
+  ]
+}

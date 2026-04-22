@@ -1,0 +1,166 @@
+/* ─── Animated Social Card ─── */
+
+.card {
+  position: relative;
+  height: 300px;
+  width: 230px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Disable all hover effects for side cards */
+.noHover.card:hover .main  { transform: scale(1); }
+.noHover.card:hover .top   { top: 0px; }
+.noHover.card:hover .left  { left: 0; transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s; }
+.noHover.card:hover .right { right: 0; transform: translateX(50%) scale(-1, 1); transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s; }
+.noHover.card:hover .title { opacity: 0; }
+.noHover.card:hover .btn:nth-child(1) { bottom: 300px; }
+.noHover.card:hover .btn:nth-child(2) { bottom: 300px; }
+.noHover.card:hover .btn:nth-child(3) { bottom: 300px; }
+
+.boxshadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--c, #C0E1D2);
+  transform: scale(0.8);
+  box-shadow: var(--c, rgba(192,225,210,1)) 0px 30px 70px 0px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.main {
+  width: 230px;
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(
+    0deg,
+    var(--cd, rgba(26,76,60,0.95)) 0%,
+    var(--c, #C0E1D2) 60%,
+    var(--cd, rgba(26,76,60,0.95)) 100%
+  );
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  box-shadow: var(--c, rgba(192,225,210,1)) 0px 7px 29px 0px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card:hover .main {
+  transform: scale(1.1);
+}
+
+/* ── Dark overlay panels that slide away on hover ── */
+.top {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 2;
+  border-top: 115px solid #F6F4E8;
+  border-left: 115px solid transparent;
+  border-right: 115px solid transparent;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card:hover .top {
+  top: -50px;
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 101%;
+  background: #F6F4E8;
+  clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+  transform: translateX(50%) scale(-1, 1);
+}
+
+.card:hover .left {
+  left: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card:hover .right {
+  right: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+/* ── Title revealed on hover ── */
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  z-index: -1;
+  color: #1A2320;
+  white-space: nowrap;
+  transition: all 0.2s ease-out 0s;
+}
+
+.card:hover .title {
+  opacity: 1;
+  transition: all 0.2s ease-out 1.3s;
+}
+
+/* ── Social buttons ── */
+.buttonContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 6px 14px;
+  clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+  background: #1A2320;
+  border: none;
+  color: white;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.btnIcon {
+  width: 16px;
+  height: 16px;
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.btn:nth-child(1) { bottom: 300px; transition-delay: 0.4s; }
+.btn:nth-child(2) { bottom: 300px; transition-delay: 0.6s; }
+.btn:nth-child(3) { bottom: 300px; transition-delay: 0.8s; }
+
+.btn:hover .btnIcon { transform: scale(1.25); }
+.btn:active .btnIcon { transform: scale(0.75); }
+
+.card:hover .btn:nth-child(1) { bottom: 80px; transition-delay: 0.8s; }
+.card:hover .btn:nth-child(2) { bottom: 40px; transition-delay: 0.6s; }
+.card:hover .btn:nth-child(3) { bottom: 0;    transition-delay: 0.4s; }

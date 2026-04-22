@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "heading": "ACHIEVEMENTS",
+    "subheading": "Our milestones, awards, and proud moments on the competitive stage."
+  },
+  "stats": [
+    { "value": "10+", "label": "Competitions Won" },
+    { "value": "5+", "label": "State-Level Awards" },
+    { "value": "3", "label": "National Recognitions" },
+    { "value": "2019", "label": "Founded" }
+  ],
+  "timeline": [
+    {
+      "id": "ach-1",
+      "year": "2024",
+      "title": "State Robotics Championship – 1st Place",
+      "description": "Our autonomous robot team secured first place at the State Robotics Championship, outperforming 40+ teams.",
+      "category": "Competition",
+      "badge": "🏆 Gold"
+    },
+    {
+      "id": "ach-2",
+      "year": "2024",
+      "title": "Best AV Production — School Annual Day",
+      "description": "Awarded Best AV Production for our live multicam event coverage and edited highlight reel of the School Annual Day.",
+      "category": "AV",
+      "badge": "🎬 Best Production"
+    },
+    {
+      "id": "ach-3",
+      "year": "2023",
+      "title": "National Science Innovation Prize – Finalist",
+      "description": "Reached the national finals with our autonomous waste-sorting robot project, recognized for innovation and technical depth.",
+      "category": "Innovation",
+      "badge": "🥈 Finalist"
+    },
+    {
+      "id": "ach-4",
+      "year": "2023",
+      "title": "Inter-School Coding Olympiad – 2nd Place",
+      "description": "Our software team placed 2nd in the Inter-School Coding Olympiad, competing against 80+ teams across the district.",
+      "category": "Competition",
+      "badge": "🥈 Silver"
+    },
+    {
+      "id": "ach-5",
+      "year": "2022",
+      "title": "IoT Innovation Challenge – 1st Place",
+      "description": "Won first place for our smart classroom automation system at the district IoT Innovation Challenge.",
+      "category": "Innovation",
+      "badge": "🏆 Gold"
+    },
+    {
+      "id": "ach-6",
+      "year": "2022",
+      "title": "Best Club of the Year – School Award",
+      "description": "Recognized as the Best Club of the Year by school administration for contributions across robotics, AV, and community events.",
+      "category": "Recognition",
+      "badge": "⭐ Club Award"
+    },
+    {
+      "id": "ach-7",
+      "year": "2021",
+      "title": "Regional STEM Fair – Innovation Award",
+      "description": "Our remote-controlled terrain rover won the Innovation Award at the Regional STEM Fair.",
+      "category": "Competition",
+      "badge": "🏅 Innovation Award"
+    },
+    {
+      "id": "ach-8",
+      "year": "2020",
+      "title": "First Club Robotics Demo Day",
+      "description": "Successfully hosted our first internal Demo Day showcasing 5 projects to 200+ students and faculty.",
+      "category": "Milestone",
+      "badge": "🎯 Milestone"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Robotics and av club website",
+    "framework": "unknown",
+    "language": "javascript",
+    "packageManager": "npm"
+  },
+  "scan": {
+    "exclude": [
+      "node_modules",
+      "dist",
+      "build",
+      ".next",
+      ".vibecheck"
+    ]
+  },
+  "createdAt": "2026-04-18T14:49:49.386Z"
+}

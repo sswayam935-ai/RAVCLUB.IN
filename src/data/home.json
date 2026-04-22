@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "clubName": "ROBOTICS & AV CLUB",
+    "tagline": "Engineering Tomorrow, Today.",
+    "subTagline": "Where circuits meet creativity — building the future with code, hardware, and vision.",
+    "cta": { "label": "Explore Our Work", "href": "/projects" },
+    "ctaSecondary": { "label": "Meet the Team", "href": "/team" }
+  },
+  "about": {
+    "heading": "Who We Are",
+    "body": "The Robotics and AV Club is a student-driven community of innovators, engineers, and creators. We build cutting-edge robots, automate systems, produce high-quality audio-visual content, and compete at state and national levels. Our club bridges the gap between imagination and engineering — giving every member the tools, mentorship, and platform to turn ambitious ideas into reality.",
+    "highlights": [
+      { "value": "50+", "label": "Active Members" },
+      { "value": "15+", "label": "Projects Completed" },
+      { "value": "10+", "label": "Competitions Won" },
+      { "value": "5+", "label": "Years of Innovation" }
+    ]
+  },
+  "marquee": {
+    "items": [
+      "ROBOTICS",
+      "AUTOMATION",
+      "AV PRODUCTION",
+      "INNOVATION",
+      "ENGINEERING",
+      "CODE",
+      "CIRCUITS",
+      "CREATIVITY",
+      "VISION",
+      "FUTURE"
+    ]
+  },
+  "whatWeDo": {
+    "heading": "What We Do",
+    "areas": [
+      {
+        "id": "robotics",
+        "title": "Robotics",
+        "description": "We design, build, and program autonomous and remote-controlled robots for competitions and real-world problem solving.",
+        "icon": "🤖"
+      },
+      {
+        "id": "automation",
+        "title": "Automation",
+        "description": "From smart systems to IoT projects, we engineer automation solutions that solve everyday challenges.",
+        "icon": "⚙️"
+      },
+      {
+        "id": "av-production",
+        "title": "AV Production",
+        "description": "We produce high-quality audio-visual content — event coverage, promo videos, livestreams and more.",
+        "icon": "🎬"
+      },
+      {
+        "id": "coding",
+        "title": "Software & AI",
+        "description": "From firmware to machine learning, our members write the code that powers intelligent systems.",
+        "icon": "💻"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to Build the Future?",
+    "body": "Join the Robotics & AV Club and be part of a community that creates, competes, and innovates.",
+    "button": { "label": "Join Us", "href": "#contact" }
+  },
+  "contact": {
+    "heading": "Get In Touch",
+    "email": "roboticsavclub@school.edu",
+    "instagram": "@roboticsavclub",
+    "location": "Engineering Block, Room 204"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "heading": "THE TEAM",
+    "subheading": "The minds and hands behind every circuit, line of code, and frame of footage."
+  },
+  "departments": ["All", "Leadership", "Robotics", "Software", "AV Production", "Hardware"],
+  "members": [
+    {
+      "id": "member-1",
+      "name": "Arjun Sharma",
+      "role": "Club President",
+      "department": "Leadership",
+      "bio": "Leading the club since 2023, Arjun oversees all operations and drives the club's vision forward.",
+      "skills": ["Leadership", "Project Management", "Arduino"],
+      "avatar": "/team/arjun.jpg",
+      "initials": "AS"
+    },
+    {
+      "id": "member-2",
+      "name": "Priya Mehta",
+      "role": "Vice President",
+      "department": "Leadership",
+      "bio": "Priya coordinates between all departments and manages event planning and external competitions.",
+      "skills": ["Coordination", "Strategy", "Communication"],
+      "avatar": "/team/priya.jpg",
+      "initials": "PM"
+    },
+    {
+      "id": "member-3",
+      "name": "Rohan Verma",
+      "role": "Robotics Lead",
+      "department": "Robotics",
+      "bio": "Rohan heads the robotics division, specializing in autonomous systems and mechanical design.",
+      "skills": ["ROS", "Mechanical Design", "Python", "C++"],
+      "avatar": "/team/rohan.jpg",
+      "initials": "RV"
+    },
+    {
+      "id": "member-4",
+      "name": "Sneha Patel",
+      "role": "Software Lead",
+      "department": "Software",
+      "bio": "Sneha leads all software and AI/ML initiatives, from firmware to machine learning models.",
+      "skills": ["Python", "TensorFlow", "Embedded C", "React"],
+      "avatar": "/team/sneha.jpg",
+      "initials": "SP"
+    },
+    {
+      "id": "member-5",
+      "name": "Karan Singh",
+      "role": "AV Production Head",
+      "department": "AV Production",
+      "bio": "Karan leads the AV team, managing video production, editing, and live event coverage.",
+      "skills": ["Premiere Pro", "DaVinci Resolve", "Cinematography", "Live Streaming"],
+      "avatar": "/team/karan.jpg",
+      "initials": "KS"
+    },
+    {
+      "id": "member-6",
+      "name": "Ananya Reddy",
+      "role": "Hardware Engineer",
+      "department": "Hardware",
+      "bio": "Ananya designs and assembles PCBs, manages component sourcing, and handles all hardware builds.",
+      "skills": ["PCB Design", "KiCad", "Soldering", "Electronics"],
+      "avatar": "/team/ananya.jpg",
+      "initials": "AR"
+    },
+    {
+      "id": "member-7",
+      "name": "Vikram Joshi",
+      "role": "Robotics Engineer",
+      "department": "Robotics",
+      "bio": "Vikram specializes in motion control, sensor fusion, and competition robot builds.",
+      "skills": ["Arduino", "Servo Control", "Sensor Fusion", "3D Printing"],
+      "avatar": "/team/vikram.jpg",
+      "initials": "VJ"
+    },
+    {
+      "id": "member-8",
+      "name": "Meera Nair",
+      "role": "Software Developer",
+      "department": "Software",
+      "bio": "Meera works on club websites, internal tools, and automation scripts.",
+      "skills": ["Next.js", "TypeScript", "Node.js", "Raspberry Pi"],
+      "avatar": "/team/meera.jpg",
+      "initials": "MN"
+    },
+    {
+      "id": "member-9",
+      "name": "Dev Kapoor",
+      "role": "Cinematographer",
+      "department": "AV Production",
+      "bio": "Dev handles camera operations, drone footage, and visual storytelling for all club content.",
+      "skills": ["Cinematography", "Drone Operation", "Color Grading", "Photography"],
+      "avatar": "/team/dev.jpg",
+      "initials": "DK"
+    },
+    {
+      "id": "member-10",
+      "name": "Ishaan Kumar",
+      "role": "Hardware Technician",
+      "department": "Hardware",
+      "bio": "Ishaan is the go-to for hardware troubleshooting, wiring, and mechanical assembly.",
+      "skills": ["Wiring", "3D Printing", "CNC", "Mechanical Assembly"],
+      "avatar": "/team/ishaan.jpg",
+      "initials": "IK"
+    }
+  ]
+}
