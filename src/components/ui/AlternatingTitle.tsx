@@ -7,6 +7,7 @@ interface AlternatingTitleProps {
   className?: string;
   fontSize?: string;
   letterSpacing?: string;
+  color?: string;
 }
 
 /**
@@ -18,13 +19,14 @@ export function AlternatingTitle({
   className,
   fontSize = "clamp(3rem, 10vw, 8rem)",
   letterSpacing = "-0.03em",
+  color,
 }: AlternatingTitleProps) {
   const words = text.split(" ");
 
   return (
     <h1
       className={`font-display font-black leading-none mb-6 ${className ?? ""}`}
-      style={{ fontSize, letterSpacing }}
+      style={{ fontSize, letterSpacing, ...(color ? { color } : {}) }}
     >
       {words.map((word, i) => (
         <span

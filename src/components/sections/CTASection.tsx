@@ -53,9 +53,10 @@ export default function CTASection() {
             text={cta.heading}
             fontSize="clamp(2.5rem, 7vw, 7rem)"
             letterSpacing="-0.03em"
+            color="#E8F4F0"
           />
 
-          <p className="font-body text-text-muted text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="font-body text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed" style={{ color: "#B8D4CC" }}>
             {cta.body}
           </p>
 
@@ -82,17 +83,17 @@ export default function CTASection() {
         >
           <div className="flex items-center gap-2">
             <span style={{ color: "#C0E1D2" }}>✉</span>
-            <span className="font-mono text-sm" style={{ color: "#6E837D" }}>{contact.email}</span>
+            <span className="font-mono text-sm" style={{ color: "#A8C8BF" }}>{contact.email}</span>
           </div>
-          <div className="hidden sm:block h-4 w-px" style={{ background: "rgba(26,35,32,0.1)" }} />
+          <div className="hidden sm:block h-4 w-px" style={{ background: "rgba(192,225,210,0.2)" }} />
           <div className="flex items-center gap-2">
             <span style={{ color: "#DC9B9B" }}>◈</span>
-            <span className="font-mono text-sm" style={{ color: "#6E837D" }}>{contact.instagram}</span>
+            <span className="font-mono text-sm" style={{ color: "#A8C8BF" }}>{contact.instagram}</span>
           </div>
-          <div className="hidden sm:block h-4 w-px" style={{ background: "rgba(26,35,32,0.1)" }} />
+          <div className="hidden sm:block h-4 w-px" style={{ background: "rgba(192,225,210,0.2)" }} />
           <div className="flex items-center gap-2">
             <span style={{ color: "#7BB5A0" }}>⌖</span>
-            <span className="font-mono text-sm" style={{ color: "#6E837D" }}>{contact.location}</span>
+            <span className="font-mono text-sm" style={{ color: "#A8C8BF" }}>{contact.location}</span>
           </div>
         </motion.div>
       </div>
