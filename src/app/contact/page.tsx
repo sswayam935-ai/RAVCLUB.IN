@@ -264,11 +264,11 @@ export default function ContactPage() {
               >
                 <h2
                   className="font-display font-black mb-3 leading-none"
-                  style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", letterSpacing: "-0.03em", color: "#1A2320" }}
+                  style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", letterSpacing: "-0.03em", color: "#EDE9E6" }}
                 >
                   Get In{" "}
                   <span style={{
-                    background: "linear-gradient(135deg,#5FA58F,#1A2320)",
+                    background: "linear-gradient(135deg,#C9996B,#EDE9E6)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -276,7 +276,7 @@ export default function ContactPage() {
                     Touch
                   </span>
                 </h2>
-                <p className="font-body mb-10" style={{ color: "#6E837D", maxWidth: "36ch", lineHeight: 1.7 }}>
+                <p className="font-body mb-10" style={{ color: "#9A8070", maxWidth: "36ch", lineHeight: 1.7 }}>
                   Whether you want to join, collaborate, or just follow along — we&apos;d love to hear from you.
                 </p>
 
@@ -322,8 +322,8 @@ export default function ContactPage() {
               <div className="rounded-3xl p-8" style={{ background: "#EDF0EC", border: "1px solid rgba(26,35,32,0.07)" }}>
                 {/* Form header */}
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="h-px w-6" style={{ background: "rgba(192,225,210,0.6)" }} />
-                  <span className="font-mono text-xs tracking-[0.28em] uppercase" style={{ color: "#C0E1D2" }}>
+                  <span className="h-px w-6" style={{ background: "rgba(42,74,64,0.4)" }} />
+                  <span className="font-mono text-xs tracking-[0.28em] uppercase" style={{ color: "#2A4A40" }}>
                     {form.heading}
                   </span>
                 </div>
