@@ -8,13 +8,21 @@
  * scales automatically so every photo gets screen time.
  */
 
-/* ─── Gallery photos — add new entries here as you add files to public/gallery/ ─── */
+/* ─── Gallery photos — matches files in public/gallery/ ─── */
 const GALLERY_PHOTOS: { src: string; caption: string }[] = [
-  { src: "/gallery/competition.jpg",   caption: "Competition Day"     },
-  { src: "/gallery/drone-inspect.jpg", caption: "Drone Inspection"    },
-  { src: "/gallery/lab-night.jpg",     caption: "Late Night Lab"      },
-  { src: "/gallery/robot-build.jpg",   caption: "Robot Build Session" },
-  { src: "/gallery/soldering.jpg",     caption: "Soldering Workshop"  },
+  { src: "/gallery/1.jpg",                        caption: "Club Session"        },
+  { src: "/gallery/2.jpg",                        caption: "Build Day"           },
+  { src: "/gallery/3.jpg",                        caption: "Workshop"            },
+  { src: "/gallery/4.jpg",                        caption: "Competition"         },
+  { src: "/gallery/5.jpg",                        caption: "Engineering Lab"     },
+  { src: "/gallery/6.jpg",                        caption: "Team Work"           },
+  { src: "/gallery/7.jpg",                        caption: "Robot Testing"       },
+  { src: "/gallery/8.jpg",                        caption: "Drone Build"         },
+  { src: "/gallery/9.jpg",                        caption: "Soldering Session"   },
+  { src: "/gallery/10.jpeg",                      caption: "Circuit Assembly"    },
+  { src: "/gallery/11.jpg",                       caption: "Presentation Day"    },
+  { src: "/gallery/12.jpg",                       caption: "Late Night Lab"      },
+  { src: "/gallery/IMG_20260314_154150902.jpg",   caption: "Club in Action"      },
 ];
 
 /* Duration grows with the number of photos so all are always visible */

@@ -215,7 +215,8 @@
 
 /* ─── Touch device overrides (@media hover: none) ─── */
 /* On touch screens the 3D flip never fires.
-   We skip the flip entirely: always show cardContent, always hide cardFront. */
+   Show the image (front face) always, and the content panel always visible below.
+   The card stacks vertically: image on top, content below. */
 
 @media (hover: none) {
   /* Tap feedback */
@@ -223,20 +224,35 @@
     transform: scale(0.98);
   }
 
-  /* Always show back face */
-  .cardContent {
-    transform: rotateX(0deg);
+  /* Stack vertically instead of overlapping */
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    perspective: none;
   }
 
-  /* Always hide front face */
+  /* Image front — fixed height at top */
   .cardFront {
-    opacity: 0;
-    pointer-events: none;
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 18px 18px 0 0;
   }
 
-  /* Always show color bar at full opacity */
+  /* Content panel — always visible below image */
+  .cardContent {
+    position: relative;
+    transform: none;
+    inset: auto;
+    flex: 1;
+    border-radius: 0 0 18px 18px;
+  }
+
+  /* Color bar always full opacity */
   .colorBar {
     opacity: 1;
   }
 }
-
