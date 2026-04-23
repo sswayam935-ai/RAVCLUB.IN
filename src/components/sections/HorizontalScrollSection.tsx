@@ -42,7 +42,7 @@ const panels = [
 ];
 
 const N = panels.length;
-const SCROLL_END = 0.7; // horizontal scroll completes at 70%, rest is dwell time on last panel
+const SCROLL_END = 0.75; // horizontal scroll completes at 75%, rest is dwell time on last panel
 
 /* ── Desktop Panel — owns its scroll-driven entrance animation ── */
 function DesktopPanel({
@@ -162,7 +162,7 @@ function MobilePanel({
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="w-full min-h-screen flex flex-col justify-center px-6 py-20 md:px-12 relative"
       style={{
@@ -314,7 +314,7 @@ export default function HorizontalScrollSection() {
   return (
     <section
       ref={containerRef}
-      style={{ height: `${(N + 2) * 100}vh` }}
+      style={{ height: `${(N + 1) * 100}vh` }}
       className="relative hidden lg:block"
     >
       {/* Sticky viewport */}

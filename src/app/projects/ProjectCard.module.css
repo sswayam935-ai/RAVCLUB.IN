@@ -3,22 +3,20 @@
 .card {
   position: relative;
   width: 100%;
-  min-height: 260px;
-  background-color: #E5EEE4;
+  min-height: 320px;
   border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   perspective: 1000px;
-  box-shadow: 0 0 0 2px rgba(192, 225, 210, 0.2), 0 4px 24px rgba(26, 35, 32, 0.05);
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
+  box-shadow: 0 0 0 2px rgba(192, 225, 210, 0.15), 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.5s ease;
+  cursor: pointer;
+  background-color: #1a2320;
 }
 
 .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 0 2px rgba(192, 225, 210, 0.5), 0 20px 56px rgba(26, 35, 32, 0.1);
+  transform: scale(1.025);
+  box-shadow: 0 0 0 2px rgba(192, 225, 210, 0.45), 0 24px 64px rgba(0, 0, 0, 0.45);
 }
 
 /* ── Colored top accent ── */
@@ -29,27 +27,21 @@
   right: 0;
   height: 3px;
   border-radius: 18px 18px 0 0;
-  opacity: 0.65;
+  opacity: 0.8;
   transition: opacity 0.4s ease;
-  z-index: 3;
+  z-index: 5;
 }
 
 .card:hover .colorBar {
   opacity: 1;
 }
 
-/* ── Front face ── */
+/* ── Front face — full-bleed image ── */
 .cardFront {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  gap: 10px;
   z-index: 1;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.35s ease;
 }
 
 .card:hover .cardFront {
@@ -57,61 +49,113 @@
   pointer-events: none;
 }
 
+/* ── Image fill — covers the entire front ── */
+.imageWrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .projectImage {
+  transform: scale(1.06);
+}
+
+/* Fallback when no image */
+.imageFallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a2320 0%, #2c3e38 100%);
+}
+
+/* ── Gradient overlay — bottom label area ── */
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 16, 14, 0.92) 0%,
+    rgba(10, 16, 14, 0.4) 45%,
+    transparent 100%
+  );
+  z-index: 2;
+}
+
+/* ── Meta row — top badges ── */
 .metaRow {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
 
 .yearBadge {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   letter-spacing: 0.18em;
-  color: rgba(26, 35, 32, 0.28);
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 3px 8px;
+  border-radius: 100px;
+  backdrop-filter: blur(6px);
 }
 
 .categoryBadge {
   font-family: var(--font-mono);
-  font-size: 0.58rem;
+  font-size: 0.55rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 3px 9px;
   border-radius: 100px;
   border: 1px solid;
+  backdrop-filter: blur(6px);
 }
 
-.icon {
-  width: 48px;
-  height: 48px;
-  fill: rgba(26, 35, 32, 0.18);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .icon {
-  transform: scale(0);
-  opacity: 0;
+/* ── Title block — bottom of front ── */
+.frontBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 18px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .frontTitle {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: rgba(26, 35, 32, 0.55);
-  text-align: center;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .liveDot {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   color: #7BB5A0;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 /* ── Back face — flips up from bottom on hover ── */
@@ -120,14 +164,16 @@
   inset: 0;
   padding: 22px 22px 20px;
   box-sizing: border-box;
-  background-color: #F6F4E8;
+  background: linear-gradient(160deg, #1e2e2a 0%, #111a17 100%);
+  border: 1px solid rgba(192, 225, 210, 0.08);
   transform: rotateX(-90deg);
   transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 4;
+  border-radius: 18px;
 }
 
 .card:hover .cardContent {
@@ -135,23 +181,23 @@
 }
 
 .cardTitle {
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: #1A2320;
-  font-weight: 700;
+  font-size: 1.1rem;
+  color: #EDE9E6;
+  font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
 .cardDescription {
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
   font-family: var(--font-body);
-  font-size: 0.7rem;
-  color: #6E837D;
-  line-height: 1.55;
+  font-size: 0.72rem;
+  color: rgba(154, 128, 112, 0.85);
+  line-height: 1.6;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -160,16 +206,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .techTag {
   font-family: var(--font-mono);
-  font-size: 0.575rem;
-  padding: 2px 7px;
+  font-size: 0.55rem;
+  padding: 3px 8px;
   border-radius: 100px;
-  background: rgba(192, 225, 210, 0.18);
-  border: 1px solid rgba(192, 225, 210, 0.42);
+  background: rgba(192, 225, 210, 0.1);
+  border: 1px solid rgba(192, 225, 210, 0.25);
   color: #7BB5A0;
   letter-spacing: 0.06em;
   white-space: nowrap;
@@ -184,58 +230,52 @@
 .cardButton {
   padding: 9px 18px;
   border-radius: 8px;
-  background: #C0E1D2;
-  border: none;
-  color: #1A2320;
+  background: rgba(192, 225, 210, 0.15);
+  border: 1px solid rgba(192, 225, 210, 0.3);
+  color: #C0E1D2;
   font-family: var(--font-mono);
   font-size: 0.6rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .cardButton:hover {
   background: #7BB5A0;
-  color: #F6F4E8;
+  border-color: #7BB5A0;
+  color: #0e1a16;
 }
 
 .secondary {
   background: transparent;
-  color: #DC9B9B;
-  border: 1px solid rgba(220, 155, 155, 0.38);
+  color: rgba(220, 155, 155, 0.75);
+  border: 1px solid rgba(220, 155, 155, 0.25);
 }
 
 .secondary:hover {
-  background: rgba(220, 155, 155, 0.1);
-  color: #BA6B6B;
+  background: rgba(220, 155, 155, 0.12);
+  color: #DC9B9B;
+  border-color: rgba(220, 155, 155, 0.5);
 }
 
 /* ─── Touch device overrides (@media hover: none) ─── */
-/* On touch screens the 3D flip never fires.
-   We skip the flip entirely: always show cardContent, always hide cardFront. */
-
 @media (hover: none) {
-  /* Tap feedback */
   .card:active {
     transform: scale(0.98);
   }
 
-  /* Always show back face */
   .cardContent {
     transform: rotateX(0deg);
   }
 
-  /* Always hide front face */
   .cardFront {
     opacity: 0;
     pointer-events: none;
   }
 
-  /* Always show color bar at full opacity */
   .colorBar {
     opacity: 1;
   }
 }
-

@@ -23,7 +23,7 @@
         "CNC/VMC Machining"
       ],
       "highlight": true,
-      "image": "/projects/neelkanth.jpg",
+      "image": "/projects/ROBOWAR.jpeg",
       "color": "#00E5FF"
     },
     {
@@ -40,7 +40,7 @@
         "Steel Fabrication"
       ],
       "highlight": false,
-      "image": "/projects/rc-car.jpg",
+      "image": "/projects/RACING.jpeg",
       "color": "#00E5FF"
     },
     {
@@ -56,7 +56,7 @@
         "Strategic Maneuvering"
       ],
       "highlight": false,
-      "image": "/projects/sumo-bot.jpg",
+      "image": "/projects/SUMO.jpeg",
       "color": "#00E5FF"
     },
     {
@@ -72,7 +72,7 @@
         "Mechanical Endurance"
       ],
       "highlight": false,
-      "image": "/projects/tug-of-war.jpg",
+      "image": "/projects/TUG_OF_WAR.jpeg",
       "color": "#00E5FF"
     },
     {
@@ -88,7 +88,7 @@
         "Precision Handling"
       ],
       "highlight": false,
-      "image": "/projects/soccer-bot.jpg",
+      "image": "/projects/SOCCER.jpeg",
       "color": "#00E5FF"
     },
     {
@@ -104,7 +104,7 @@
         "RC Systems"
       ],
       "highlight": false,
-      "image": "/projects/rc-plane.jpg",
+      "image": "/projects/RC_PLANE.jpeg",
       "color": "#FF6B00"
     },
     {
@@ -120,7 +120,7 @@
         "Mechanical Coordination"
       ],
       "highlight": false,
-      "image": "/projects/pick-and-place.jpg",
+      "image": "/projects/PICK_N_PLACE.jpeg",
       "color": "#00E5FF"
     },
     {
@@ -137,7 +137,7 @@
         "Arduino"
       ],
       "highlight": false,
-      "image": "/projects/maze-solver.jpg",
+      "image": "/projects/MAZE_SOLVER.jpeg",
       "color": "#FF6B00"
     },
     {
@@ -154,7 +154,7 @@
         "Algorithm Optimization"
       ],
       "highlight": true,
-      "image": "/projects/line-follower.jpg",
+      "image": "/projects/LINE_FOLLOWER.jpeg",
       "color": "#1AFF8C"
     },
     {
@@ -171,7 +171,7 @@
         "Terrain Navigation"
       ],
       "highlight": true,
-      "image": "/projects/hexapod.jpg",
+      "image": "/projects/HEXAPOD.jpeg",
       "color": "#1AFF8C"
     },
     {
@@ -188,7 +188,7 @@
         "Barometer Integration"
       ],
       "highlight": false,
-      "image": "/projects/drone.jpg",
+      "image": "/projects/DRONE.jpeg",
       "color": "#FF6B00"
     },
     {
@@ -202,7 +202,7 @@
         "Python"
       ],
       "highlight": false,
-      "image": "/projects/python-workshop.jpg",
+      "image": "/projects/CODING_WORKSHOP.png",
       "color": "#FF6B00"
     },
     {
@@ -217,7 +217,7 @@
         "SolidWorks"
       ],
       "highlight": true,
-      "image": "/projects/solidworks-workshop.jpg",
+      "image": "/projects/DESIGN_WORKSHOP.png",
       "color": "#1AFF8C"
     },
     {
@@ -232,7 +232,7 @@
         "Component Selection"
       ],
       "highlight": true,
-      "image": "/projects/hardware-workshop.jpg",
+      "image": "/projects/HARDWARE_WORKSHOP.png",
       "color": "#1AFF8C"
     }
   ]
