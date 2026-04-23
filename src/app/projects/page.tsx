@@ -118,8 +118,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </div>
           </div>
           <div className={s.buttonRow}>
-            <button className={s.cardButton}>Live Demo</button>
-            <button className={`${s.cardButton} ${s.secondary}`}>Source Code</button>
+            <a href="/coming-soon" className={s.cardButton}>Live Demo</a>
+            <a href="/coming-soon" className={`${s.cardButton} ${s.secondary}`}>Source Code</a>
           </div>
         </div>
       </div>
