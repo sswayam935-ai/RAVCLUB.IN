@@ -260,22 +260,89 @@
   border-color: rgba(220, 155, 155, 0.5);
 }
 
-/* ─── Touch device overrides (@media hover: none) ─── */
+/* ─── Touch / Mobile — completely restructure away from flip mechanic ─── */
+/*
+ * On touch screens the 3D flip never fires.
+ * We switch the card to a normal-flow flexbox column:
+ *   top: fixed-height image block (cardFront)
+ *   bottom: content block (cardContent) — no transforms, in normal flow
+ * This eliminates the overlap/collapse caused by stacked absolute divs.
+ */
 @media (hover: none) {
+  /* Card becomes a flex column, auto height */
+  .card {
+    min-height: unset;
+    overflow: visible;
+    perspective: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden; /* re-apply just for border-radius clipping */
+  }
+
   .card:active {
     transform: scale(0.98);
   }
 
-  .cardContent {
-    transform: rotateX(0deg);
-  }
-
+  /* Front: fixed-height image strip at top — in normal flow */
   .cardFront {
-    opacity: 0;
-    pointer-events: none;
+    position: relative;
+    inset: unset;
+    height: 200px;
+    flex-shrink: 0;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    z-index: 1;
   }
 
+  /* imageWrap fills the cardFront height */
+  .imageWrap {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* metaRow stays absolute inside cardFront — that's fine */
+  .metaRow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 3;
+  }
+
+  /* frontBottom stays absolute inside cardFront */
+  .frontBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 12px 14px;
+  }
+
+  /* Content block: normal flow below the image */
+  .cardContent {
+    position: relative;
+    inset: unset;
+    transform: none !important;
+    transform-origin: unset;
+    border-radius: 0;
+    border-top: 1px solid rgba(192, 225, 210, 0.1);
+    padding: 16px 16px 18px;
+    flex: 1;
+    z-index: 2;
+  }
+
+  /* colorBar stays on top */
   .colorBar {
+    position: absolute;
+    z-index: 5;
     opacity: 1;
   }
+
+  /* Loosen description line clamp on mobile */
+  .cardDescription {
+    -webkit-line-clamp: 5;
+  }
 }
+

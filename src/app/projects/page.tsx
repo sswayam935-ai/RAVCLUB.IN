@@ -251,7 +251,7 @@ export default function ProjectsPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
             >
               {filtered.map((project, i) => (
                 <ProjectCard key={project.id} project={project} index={i} />
