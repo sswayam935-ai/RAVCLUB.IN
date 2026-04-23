@@ -3,107 +3,323 @@
     "heading": "THE TEAM",
     "subheading": "The minds and hands behind every circuit, line of code, and frame of footage."
   },
-  "departments": ["All", "Leadership", "Robotics", "Software", "AV Production", "Hardware"],
+  "departments": [
+    "All",
+    "Founder",
+    "Faculty",
+    "Executive",
+    "Core Heads",
+    "AV Heads",
+    "Technical Heads",
+    "SM & PR Heads"
+  ],
   "members": [
     {
       "id": "member-1",
-      "name": "Arjun Sharma",
-      "role": "Club President",
-      "department": "Leadership",
-      "bio": "Leading the club since 2023, Arjun oversees all operations and drives the club's vision forward.",
-      "skills": ["Leadership", "Project Management", "Arduino"],
-      "avatar": "/team/arjun.jpg",
-      "initials": "AS"
+      "name": "Dr. Akash Pandey",
+      "role": "Teacher Coordinator",
+      "department": "Faculty",
+      "bio": "Under his guidance the club bridges the gap between theoretical engineering and hands-on robotics innovation. ",
+      "skills": [
+        "Leadership",
+        "Project Management"
+      ],
+      "avatar": "/team/PHOTOS/AKASH_SIR.jpeg",
+      "initials": "AP"
     },
     {
       "id": "member-2",
-      "name": "Priya Mehta",
-      "role": "Vice President",
-      "department": "Leadership",
-      "bio": "Priya coordinates between all departments and manages event planning and external competitions.",
-      "skills": ["Coordination", "Strategy", "Communication"],
-      "avatar": "/team/priya.jpg",
-      "initials": "PM"
+      "name": "Aadil Khatri",
+      "role": "Founder",
+      "department": "Founder",
+      "bio": "Our goal in establishing the Robotics & AV Club was to create a sustainable ecosystem for innovation where technology and creativity could thrive side-by-side.",
+      "skills": [
+        "Leadership"
+      ],
+      "avatar": "/team/PHOTOS/AADIL_BHAIYA.jpeg",
+      "initials": "AK"
     },
     {
       "id": "member-3",
-      "name": "Rohan Verma",
-      "role": "Robotics Lead",
-      "department": "Robotics",
-      "bio": "Rohan heads the robotics division, specializing in autonomous systems and mechanical design.",
-      "skills": ["ROS", "Mechanical Design", "Python", "C++"],
-      "avatar": "/team/rohan.jpg",
-      "initials": "RV"
+      "name": "Giriraj Shah",
+      "role": "Founder",
+      "department": "Founder",
+      "bio": "Our goal in establishing the Robotics & AV Club was to create a sustainable ecosystem for innovation where technology and creativity could thrive side-by-side.",
+      "skills": [
+        "Leadership"
+      ],
+      "avatar": "/team/PHOTOS/GIRIRAJ_BHAIYA.jpeg",
+      "initials": "GS"
     },
     {
       "id": "member-4",
-      "name": "Sneha Patel",
-      "role": "Software Lead",
-      "department": "Software",
-      "bio": "Sneha leads all software and AI/ML initiatives, from firmware to machine learning models.",
-      "skills": ["Python", "TensorFlow", "Embedded C", "React"],
-      "avatar": "/team/sneha.jpg",
-      "initials": "SP"
+      "name": "Nikhil Singh",
+      "role": "Executive President",
+      "department": "Executive",
+      "bio": "A visionary leader with a passion for technology. He has been instrumental in shaping the club's identity and fostering a culture of innovation and excellence. ",
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "Electronics"
+      ],
+      "avatar": "/team/PHOTOS/NIKHIL_BHAIYA.png",
+      "initials": "NS"
     },
     {
       "id": "member-5",
-      "name": "Karan Singh",
-      "role": "AV Production Head",
-      "department": "AV Production",
-      "bio": "Karan leads the AV team, managing video production, editing, and live event coverage.",
-      "skills": ["Premiere Pro", "DaVinci Resolve", "Cinematography", "Live Streaming"],
-      "avatar": "/team/karan.jpg",
-      "initials": "KS"
+      "name": "Kunal Chandiramani",
+      "role": "Executive Vice President",
+      "department": "Executive",
+      "bio": "He is a good public speaker and a motivator, and enlighten young minds of the club.",
+      "skills": [
+        "Coordination",
+        "Strategy",
+        "Communication",
+        "Mechanical"
+      ],
+      "avatar": "/team/PHOTOS/KC_BHAIYA.jpeg",
+      "initials": "KC"
     },
     {
       "id": "member-6",
-      "name": "Ananya Reddy",
-      "role": "Hardware Engineer",
-      "department": "Hardware",
-      "bio": "Ananya designs and assembles PCBs, manages component sourcing, and handles all hardware builds.",
-      "skills": ["PCB Design", "KiCad", "Soldering", "Electronics"],
-      "avatar": "/team/ananya.jpg",
-      "initials": "AR"
+      "name": "Mihir Kansara",
+      "role": "Executive Vice President",
+      "department": "Executive",
+      "bio": "He always tries to make a proper balance between all the activities the club organises and ensure that every member gets a chance to showcase their talents.",
+      "skills": [
+        "Coordination",
+        "Strategy",
+        "Communication",
+        "Mechanical"
+      ],
+      "avatar": "/team/PHOTOS/MIHIR_BHAIYA.jpeg",
+      "initials": "MK"
     },
     {
       "id": "member-7",
-      "name": "Vikram Joshi",
-      "role": "Robotics Engineer",
-      "department": "Robotics",
-      "bio": "Vikram specializes in motion control, sensor fusion, and competition robot builds.",
-      "skills": ["Arduino", "Servo Control", "Sensor Fusion", "3D Printing"],
-      "avatar": "/team/vikram.jpg",
-      "initials": "VJ"
+      "name": "Sujal Patel",
+      "role": "Treasurer",
+      "department": "Executive",
+      "bio": "He manages the club's financial books, ensuring resource optimization for all technical projects. ",
+      "skills": [
+        "Coordination",
+        "Strategy",
+        "Communication",
+        "Mechanical"
+      ],
+      "avatar": "/team/PHOTOS/SUJAL_BHAIYA.jpeg",
+      "initials": "SP "
     },
     {
       "id": "member-8",
-      "name": "Meera Nair",
-      "role": "Software Developer",
-      "department": "Software",
-      "bio": "Meera works on club websites, internal tools, and automation scripts.",
-      "skills": ["Next.js", "TypeScript", "Node.js", "Raspberry Pi"],
-      "avatar": "/team/meera.jpg",
-      "initials": "MN"
+      "name": "Naman Tiwari",
+      "role": "Student Head Coordinator",
+      "department": "Core Heads",
+      "bio": "Success, Not a big deal",
+      "skills": [
+        "Coordination",
+        "Strategy"
+      ],
+      "avatar": "/team/PHOTOS/NAMAN.png",
+      "initials": "NT"
     },
     {
       "id": "member-9",
-      "name": "Dev Kapoor",
-      "role": "Cinematographer",
-      "department": "AV Production",
-      "bio": "Dev handles camera operations, drone footage, and visual storytelling for all club content.",
-      "skills": ["Cinematography", "Drone Operation", "Color Grading", "Photography"],
-      "avatar": "/team/dev.jpg",
-      "initials": "DK"
+      "name": "Juned Ghanchi",
+      "role": "Finance Head",
+      "department": "Core Heads",
+      "bio": "Fueling the future of automation and robotics with strategic foresight",
+      "skills": [
+        "Finance",
+        "Management",
+        "Strategy",
+        "Electronics"
+      ],
+      "avatar": "/team/PHOTOS/JUNED.jpeg",
+      "initials": "JG"
     },
     {
       "id": "member-10",
-      "name": "Ishaan Kumar",
-      "role": "Hardware Technician",
-      "department": "Hardware",
-      "bio": "Ishaan is the go-to for hardware troubleshooting, wiring, and mechanical assembly.",
-      "skills": ["Wiring", "3D Printing", "CNC", "Mechanical Assembly"],
-      "avatar": "/team/ishaan.jpg",
-      "initials": "IK"
+      "name": "Devam Patil",
+      "role": "Sponsorship Head",
+      "department": "Core Heads",
+      "bio": "Turn every ambition into something you enjoy.",
+      "skills": [
+        "Sponsorship",
+        "Management",
+        "Communication"
+      ],
+      "avatar": "/team/PHOTOS/DEVAM.jpeg",
+      "initials": "DP"
+    },
+    {
+      "id": "member-11",
+      "name": "Deep Vajani",
+      "role": "AV Head",
+      "department": "AV Heads",
+      "bio": "I'm the destroyer",
+      "skills": [
+        "Electric Vehicle",
+        "Mechanical Design"
+      ],
+      "avatar": "/team/PHOTOS/DEEP.png",
+      "initials": "DV"
+    },
+    {
+      "id": "member-12",
+      "name": "Dhruv Sukhramwala",
+      "role": "AV Electronics Head",
+      "department": "AV Heads",
+      "bio": "Precision isn’t optional—it’s engineered.",
+      "skills": [
+        "Electronics",
+        "PCB Design",
+        "ROS",
+        "OpenCV"
+      ],
+      "avatar": "/team/PHOTOS/DHRUV.jpeg",
+      "initials": "DS"
+    },
+    {
+      "id": "member-13",
+      "name": "Mukund Jha",
+      "role": "AV Electronics Head",
+      "department": "AV Heads",
+      "bio": "",
+      "skills": [
+        "Electronics",
+        "Electrical",
+        "PCB Design"
+      ],
+      "avatar": "/team/PHOTOS/MUKUND.jpeg",
+      "initials": "MJ"
+    },
+    {
+      "id": "member-14",
+      "name": "Minakshi Rathore",
+      "role": "Social Media and Marketing Head",
+      "department": "SM & PR Heads",
+      "bio": "Gracefully mean",
+      "skills": [
+        "Social Media Marketing",
+        "Content Creation",
+        "Marketing"
+      ],
+      "avatar": "/team/PHOTOS/MINAKSHI.jpeg",
+      "initials": "MR"
+    },
+    {
+      "id": "member-15",
+      "name": "Drashti Luhar",
+      "role": "Social Media and Marketing Head",
+      "department": "SM & PR Heads",
+      "bio": "They will judge u anyway so keep going",
+      "skills": [
+        "Social Media Marketing",
+        "Content Creation",
+        "Marketing"
+      ],
+      "avatar": "/team/PHOTOS/DRASHTI.jpeg",
+      "initials": "DL"
+    },
+    {
+      "id": "member-16",
+      "name": "Sujal Chauhan",
+      "role": "Electronics Head",
+      "department": "Technical Heads",
+      "bio": "Engineering intelligence into motion",
+      "skills": [
+        "Electronics",
+        "PCB Design",
+        "ROS"
+      ],
+      "avatar": "/team/PHOTOS/SUJAL.png",
+      "initials": "SC"
+    },
+    {
+      "id": "member-17",
+      "name": "Mustafa Raja",
+      "role": "Programming Head",
+      "department": "Technical Heads",
+      "bio": "Code, circuits, and a mind that doesn’t idle",
+      "skills": [
+        "Programming",
+        "Web Development",
+        "Electronics",
+        "SLAM"
+      ],
+      "avatar": "/team/PHOTOS/MUSTAFA.png",
+      "initials": "MR"
+    },
+    {
+      "id": "member-18",
+      "name": "Shubham Singh",
+      "role": "Programming Head",
+      "department": "Technical Heads",
+      "bio": "If the code works don't touch it",
+      "skills": [
+        "Programming",
+        "Web Development",
+        "Electronics",
+        "Autonomous Vehicle"
+      ],
+      "avatar": "/team/PHOTOS/SHUBHAM.jpeg",
+      "initials": "SS"
+    },
+    {
+      "id": "member-19",
+      "name": "Darshan Pankhaniya",
+      "role": "Design Head",
+      "department": "Technical Heads",
+      "bio": "",
+      "skills": [
+        "Solidworks",
+        "Mechanical Design",
+        "Electric Vehicle"
+      ],
+      "avatar": "/team/PHOTOS/DARSHAN.jpeg",
+      "initials": "DP"
+    },
+    {
+      "id": "member-20",
+      "name": "Ikram Bhatti",
+      "role": "Hardware Head",
+      "department": "Technical Heads",
+      "bio": " Keep the student alive, and the man will follow.",
+      "skills": [
+        "Solidworks",
+        "Mechanical Design",
+        "Electric Vehicle"
+      ],
+      "avatar": "/team/PHOTOS/IKRAM.png",
+      "initials": "IB"
+    },
+    {
+      "id": "member-21",
+      "name": "Shiven Babariya",
+      "role": "Hardware Head",
+      "department": "Technical Heads",
+      "bio": " To stop learning is to stop living. Stay curious.",
+      "skills": [
+        "Solidworks",
+        "Mechanical Design"
+      ],
+      "avatar": "/team/PHOTOS/SHIVEN.jpeg",
+      "initials": "SB"
+    },
+    {
+      "id": "member-22",
+      "name": "Swayam Shah",
+      "role": "Web Developer",
+      "department": "Web Dev Team",
+      "bio": " To stop learning is to stop living. Stay curious.",
+      "skills": [
+        "Solidworks",
+        "Mechanical Design",
+        "Web Development"
+      ],
+      "avatar": "",
+      "initials": "SS"
     }
   ]
 }

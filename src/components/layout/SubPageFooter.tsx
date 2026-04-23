@@ -5,10 +5,10 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const navLinks = [
-  { index: "01", label: "Home",         href: "/" },
-  { index: "02", label: "Projects",     href: "/projects" },
+  { index: "01", label: "Home", href: "/" },
+  { index: "02", label: "Projects", href: "/projects" },
   { index: "03", label: "Achievements", href: "/achievements" },
-  { index: "04", label: "Team",         href: "/team" },
+  { index: "04", label: "Team", href: "/team" },
 ];
 
 interface SubPageFooterProps {
@@ -16,7 +16,7 @@ interface SubPageFooterProps {
 }
 
 export default function SubPageFooter({ pageName }: SubPageFooterProps) {
-  const ref   = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.08 });
 
   return (
@@ -39,13 +39,19 @@ export default function SubPageFooter({ pageName }: SubPageFooterProps) {
             Robotics &amp; AV Club
           </p>
           <p
-            className="font-mono uppercase mb-10"
+            className="font-mono uppercase"
             style={{ fontSize: "0.625rem", letterSpacing: "0.28em", color: "rgba(154,128,112,0.38)" }}
           >
             Est. 2022 — Engineering Tomorrow, Today.
           </p>
+          <p
+            className="font-mono uppercase mb-10 mt-2"
+            style={{ fontSize: "0.55rem", letterSpacing: "0.22em", color: "rgba(201,153,107,0.5)" }}
+          >
+            ◈ Head Sponsor: MSU VISION2020
+          </p>
           <ul className="flex flex-col gap-2.5">
-            {["roboticsavclub@school.edu", "@roboticsavclub", "Engineering Block, Room 204"].map((item) => (
+            {["Faculty Of Technology And Engineering, MSU Baroda"].map((item) => (
               <li
                 key={item}
                 className="font-mono"
@@ -113,10 +119,10 @@ export default function SubPageFooter({ pageName }: SubPageFooterProps) {
         style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
       >
         <span className="font-mono" style={{ fontSize: "0.625rem", letterSpacing: "0.18em", color: "rgba(154,128,112,0.22)" }}>
-          © 2024 ROBOTICS &amp; AV CLUB
+          © 2026 ROBOTICS &amp; AV CLUB
         </span>
         <span className="font-mono" style={{ fontSize: "0.625rem", letterSpacing: "0.12em", color: "rgba(154,128,112,0.16)" }}>
-          BUILT WITH PRECISION
+          Built with ❤️ and circuits
         </span>
       </div>
     </footer>

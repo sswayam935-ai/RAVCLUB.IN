@@ -81,10 +81,6 @@ export default function CTASection() {
           transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-text-muted"
         >
-          <div className="flex items-center gap-2">
-            <span style={{ color: "#C0E1D2" }}>✉</span>
-            <span className="font-mono text-sm" style={{ color: "#A8C8BF" }}>{contact.email}</span>
-          </div>
           <div className="hidden sm:block h-4 w-px" style={{ background: "rgba(192,225,210,0.2)" }} />
           <div className="flex items-center gap-2">
             <span style={{ color: "#DC9B9B" }}>◈</span>

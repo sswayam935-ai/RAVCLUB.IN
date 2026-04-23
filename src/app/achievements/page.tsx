@@ -180,7 +180,7 @@ export default function AchievementsPage() {
               letterSpacing: "-0.04em",
             }}
           >
-            DOMINANCE
+            DOMINATE
           </span>
         </motion.div>
 

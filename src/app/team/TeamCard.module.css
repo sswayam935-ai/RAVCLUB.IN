@@ -43,6 +43,7 @@
   color: #5C766D;
   font-family: var(--font-display);
   transition: 0.4s ease-in-out;
+  overflow: hidden;
 }
 
 .card:hover .initialsBox {

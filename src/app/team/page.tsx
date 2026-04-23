@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import teamData from "@/data/team.json";
 import SubPageFooter from "@/components/layout/SubPageFooter";
@@ -59,6 +59,11 @@ function NodeNetwork() {
 
 /* ─── Member Card (weather-expand mechanic preserved) ─── */
 function MemberCard({ member, index }: { member: Member; index: number }) {
+  const [imgError, setImgError] = useState(false);
+  const handleImgError = useCallback(() => setImgError(true), []);
+
+  const showPhoto = member.avatar && !imgError;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40, scale: 0.97 }}
@@ -71,7 +76,25 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
       <div className={s.cardm}>
         {/* ── Front Card ── */}
         <div className={s.card}>
-          <div className={s.initialsBox}>{member.initials}</div>
+          <div className={s.initialsBox}>
+            {showPhoto ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={member.avatar}
+                alt={member.name}
+                onError={handleImgError}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                  display: "block",
+                }}
+              />
+            ) : (
+              member.initials
+            )}
+          </div>
           <div className={s.cardInfo}>
             <span className={s.memberName}>{member.name}</span>
             <span className={s.memberRole}>{member.role}</span>
@@ -140,7 +163,7 @@ export default function TeamPage() {
               letterSpacing: "-0.05em",
             }}
           >
-            UNITY
+            UNITE
           </span>
         </motion.div>
 

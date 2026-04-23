@@ -52,6 +52,7 @@ export default function HeroSection() {
           <span className="h-px w-12 bg-accent-cyan/50" />
         </motion.div>
 
+
         {/* Big Title Reveal */}
         <motion.div style={{ y: springY }} className="mb-6">
           <div className="overflow-hidden">
@@ -99,6 +100,19 @@ export default function HeroSection() {
             className="font-body text-sm md:text-base text-text-muted/70 max-w-xl mx-auto leading-relaxed"
           >
             {hero.subTagline}
+          </motion.p>
+
+          {/* Head Sponsor — plain text, no box */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="font-mono uppercase mt-6"
+            style={{ fontSize: "0.75rem", letterSpacing: "0.22em" }}
+          >
+            <span style={{ color: "rgba(154,128,112,0.5)" }}>Head Sponsor</span>
+            <span style={{ color: "rgba(201,153,107,0.35)", margin: "0 0.6rem" }}>◆</span>
+            <span style={{ color: "rgba(201,153,107,0.85)", fontWeight: 700 }}>MSU VISION2020</span>
           </motion.p>
         </motion.div>
 

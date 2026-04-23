@@ -144,7 +144,7 @@ export default function ProjectsPage() {
               letterSpacing: "-0.05em",
             }}
           >
-            INNOVATION
+            INNOVATE
           </span>
         </motion.div>
 

@@ -5,151 +5,235 @@
   },
   "categories": [
     "All",
-    "Robotics",
-    "Software",
-    "AV Production",
-    "IoT",
-    "AI/ML"
+    "Autonomous",
+    "Aerospace",
+    "Mechanica",
+    "Workshop"
   ],
   "projects": [
     {
       "id": "proj-1",
-      "title": "Autonomous Waste",
-      "category": "Robotics",
-      "year": "2024",
+      "title": "Robowar",
+      "category": "Mechanica",
+      "year": "2022",
       "status": "Completed",
-      "description": "A fully autonomous robot that uses computer vision to identify and sort recyclable waste from general waste in real time.",
+      "description": "An 8 kg combat robot designed in SolidWorks with an Al 6082 body, H13 steel weapon, and S24 steel shaft. High-stress parts achieved 48-51 HRC through oil quenching.",
       "tech": [
-        "Python",
-        "OpenCV",
-        "Arduino",
-        "Servo Motors",
-        "Raspberry Pi"
+        "SolidWorks",
+        "CNC/VMC Machining"
       ],
       "highlight": true,
-      "image": "/projects/waste-sorter.jpg",
+      "image": "/projects/neelkanth.jpg",
       "color": "#00E5FF"
     },
     {
       "id": "proj-2",
-      "title": "Smart Classroom Automation",
-      "category": "IoT",
+      "title": "RC Car",
+      "category": "Mechanica",
       "year": "2023",
       "status": "Completed",
-      "description": "IoT-based classroom system that auto-controls lights, fans, and projectors based on occupancy and schedule.",
+      "description": "Features a laser-cut, bent steel plate chassis designed in CAD with rubber-gripped wheels for traction. Optimized by replacing Arduino/motor controllers with an ESC to improve response time.",
       "tech": [
-        "ESP32",
-        "MQTT",
-        "Node-RED",
-        "Raspberry Pi",
-        "Python"
+        "CAD Design",
+        "Laser Cutting",
+        "ESC",
+        "Steel Fabrication"
       ],
-      "highlight": true,
-      "image": "/projects/smart-classroom.jpg",
-      "color": "#1AFF8C"
+      "highlight": false,
+      "image": "/projects/rc-car.jpg",
+      "color": "#00E5FF"
     },
     {
       "id": "proj-3",
-      "title": "Annual Day Highlight Film",
-      "category": "AV Production",
-      "year": "2024",
+      "title": "Sumo Bot",
+      "category": "Mechanica",
+      "year": "2023",
       "status": "Completed",
-      "description": "4K multicam production and cinematic highlight film of the School Annual Day 2024, viewed by 5000+ people.",
+      "description": "A robust combat bot focusing on strength, stability, and pushing power. ",
       "tech": [
-        "Sony A7IV",
-        "DaVinci Resolve",
-        "DJI Drone",
-        "Premiere Pro"
+        "Drivetrain Optimization",
+        "High-Torque Control",
+        "Strategic Maneuvering"
       ],
       "highlight": false,
-      "image": "/projects/annual-day.jpg",
-      "color": "#FF6B00"
+      "image": "/projects/sumo-bot.jpg",
+      "color": "#00E5FF"
     },
     {
       "id": "proj-4",
-      "title": "Line-Following Competition Bot",
-      "category": "Robotics",
+      "title": "Tug of War Bot",
+      "category": "Mechanica",
       "year": "2023",
       "status": "Completed",
-      "description": "High-speed line-following robot with PID control, built and optimized for state-level competition tracks.",
+      "description": "High-torque bot optimized for maximum traction and mechanical endurance under heavy load.",
       "tech": [
-        "Arduino Mega",
-        "IR Sensors",
-        "PID Control",
-        "C++"
+        "Traction Engineering",
+        "High-Torque Motors",
+        "Mechanical Endurance"
       ],
       "highlight": false,
-      "image": "/projects/line-follower.jpg",
+      "image": "/projects/tug-of-war.jpg",
       "color": "#00E5FF"
     },
     {
       "id": "proj-5",
-      "title": "Face Recognition Attendance",
-      "category": "AI/ML",
+      "title": "Soccer Bot",
+      "category": "Mechanica",
       "year": "2023",
       "status": "Completed",
-      "description": "AI-powered attendance management system using face recognition, integrated with a web dashboard.",
+      "description": "Manually controlled bot designed for high speed and responsiveness.",
       "tech": [
-        "Python",
-        "FaceNet",
-        "Flask",
-        "React",
-        "SQLite"
+        "Speed Control",
+        "RF Control",
+        "Precision Handling"
       ],
-      "highlight": true,
-      "image": "/projects/face-recognition.jpg",
-      "color": "#1AFF8C"
+      "highlight": false,
+      "image": "/projects/soccer-bot.jpg",
+      "color": "#00E5FF"
     },
     {
       "id": "proj-6",
-      "title": "Terrain Rover",
-      "category": "Robotics",
-      "year": "2022",
+      "title": "RC Plane",
+      "category": "Aerospace",
+      "year": "2024",
       "status": "Completed",
-      "description": "Remote-controlled 6-wheel terrain rover with live video feed, designed for rough surface navigation.",
+      "description": "A training model designed for durability and ease of handling to help club members practice flight control foundations.",
       "tech": [
-        "Raspberry Pi",
-        "RF Control",
-        "FPV Camera",
-        "Python"
+        "Flight Control",
+        "Aerodynamics",
+        "RC Systems"
       ],
       "highlight": false,
-      "image": "/projects/terrain-rover.jpg",
+      "image": "/projects/rc-plane.jpg",
       "color": "#FF6B00"
     },
     {
       "id": "proj-7",
-      "title": "Club Management Web App",
-      "category": "Software",
+      "title": "Pick and Place Bot",
+      "category": "Mechanica",
       "year": "2024",
-      "status": "In Progress",
-      "description": "A full-stack web app for managing club members, projects, events, and inventory with role-based access.",
+      "status": "Completed",
+      "description": "Focused on robotic arm coordination and precision handling in dynamic environments.",
       "tech": [
-        "Next.js",
-        "TypeScript",
-        "Supabase",
-        "Prisma",
-        "TailwindCSS"
+        "Robotic Arm Design",
+        "Precision Control",
+        "Mechanical Coordination"
       ],
       "highlight": false,
-      "image": "/projects/club-app.jpg",
+      "image": "/projects/pick-and-place.jpg",
       "color": "#00E5FF"
     },
     {
       "id": "proj-8",
-      "title": "Science Day Promo Film",
-      "category": "AV Production",
-      "year": "2022",
+      "title": "Maze Solver",
+      "category": "Autonomous",
+      "year": "2024",
       "status": "Completed",
-      "description": "Promotional short film for National Science Day showcasing student projects and lab activities.",
+      "description": "Advanced from ultrasonic sensors to a LiDAR-based system with custom PCBs. ",
       "tech": [
-        "Premiere Pro",
-        "After Effects",
-        "Motion Graphics"
+        "LiDAR",
+        "Custom PCB",
+        "Pathfinding Algorithms",
+        "Arduino"
       ],
       "highlight": false,
-      "image": "/projects/science-day.jpg",
+      "image": "/projects/maze-solver.jpg",
       "color": "#FF6B00"
+    },
+    {
+      "id": "proj-9",
+      "title": "Line Follower",
+      "category": "Autonomous",
+      "year": "2024",
+      "status": "Completed",
+      "description": "Upgraded from a 5-sensor to an 8-sensor system with custom PCBs.",
+      "tech": [
+        "IR Sensor Array",
+        "Custom PCB",
+        "PID Control",
+        "Algorithm Optimization"
+      ],
+      "highlight": true,
+      "image": "/projects/line-follower.jpg",
+      "color": "#1AFF8C"
+    },
+    {
+      "id": "proj-10",
+      "title": "Hexapod",
+      "category": "Mechanica",
+      "year": "2024",
+      "status": "Completed",
+      "description": "Six-legged robot engineered for navigation over uneven terrain.",
+      "tech": [
+        "Servo Control",
+        "Kinematics",
+        "Bio-inspired Design",
+        "Terrain Navigation"
+      ],
+      "highlight": true,
+      "image": "/projects/hexapod.jpg",
+      "color": "#1AFF8C"
+    },
+    {
+      "id": "proj-11",
+      "title": "Custom Flight Drone",
+      "category": "Aerospace",
+      "year": "2024",
+      "status": "In Progress",
+      "description": "Development of a custom flight controller using Arduino Uno and MPU6050[cite: 132, 133]. Successfully implemented angle hold and currently integrating barometer-based stable mode[cite: 133, 134].",
+      "tech": [
+        "Arduino Uno",
+        "MPU6050",
+        "Angle Hold Algorithms",
+        "Barometer Integration"
+      ],
+      "highlight": false,
+      "image": "/projects/drone.jpg",
+      "color": "#FF6B00"
+    },
+    {
+      "id": "proj-12",
+      "title": "Python Workshop",
+      "category": "Workshop",
+      "year": "2025",
+      "status": "Completed",
+      "description": "A Python workshop was conducted for the students of the Robotics Club to introduce them to coding, assist in programming robots, and help them gain hands-on experience in coding for robotics applications. ",
+      "tech": [
+        "Python"
+      ],
+      "highlight": false,
+      "image": "/projects/python-workshop.jpg",
+      "color": "#FF6B00"
+    },
+    {
+      "id": "proj-13",
+      "title": "Design Workshop",
+      "category": "Workshop",
+      "year": "2025",
+      "status": "Completed",
+      "description": "A SolidWorks design workshop was conducted for students to enhance their skills in designing various types of robots. The workshop focused on both 2D and 3D design, providing hands-on experience in creating detailed and precise models. It aimed to help students develop essential design skills for building and prototyping robots effectively.",
+      "tech": [
+        "CAD Design",
+        "SolidWorks"
+      ],
+      "highlight": true,
+      "image": "/projects/solidworks-workshop.jpg",
+      "color": "#1AFF8C"
+    },
+    {
+      "id": "proj-14",
+      "title": "Hardware workshop",
+      "category": "Workshop",
+      "year": "2025",
+      "status": "Completed",
+      "description": "A hardware workshop was conducted to help students understand the selection of materials and components for building robots. The session focused on choosing the right parts for efficient design and functionality, enhancing their practical knowledge in robotics hardware and providing basic knowledge of power transmission.",
+      "tech": [
+        "Material Selection",
+        "Component Selection"
+      ],
+      "highlight": true,
+      "image": "/projects/hardware-workshop.jpg",
+      "color": "#1AFF8C"
     }
   ]
 }
