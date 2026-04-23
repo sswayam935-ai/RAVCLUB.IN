@@ -1,11 +1,11 @@
-/* ─── Team Member Card (Weather-card style) ─── */
+/* ─── Team Member Card (Weather-card style) — DESKTOP ONLY ─── */
+/* The mobile card is a completely separate component rendered via useMediaQuery */
 
 .cardm {
   position: relative;
   width: 250px;
   height: 130px;
   isolation: isolate;
-  /* contains stacking context so z-index works correctly */
 }
 
 /* ─── Front Card ─── */
@@ -95,7 +95,6 @@
   background: #F0EBE6;
   color: #1C1714;
   z-index: 1;
-  /* sits behind front card (z-index 2) */
   transition: height 0.4s ease-in-out, border-radius 0.4s ease-in-out;
   overflow: hidden;
 }
@@ -136,14 +135,12 @@
   left: 12px;
   right: 12px;
   top: 12px;
-  /* covered by front card by default */
   font-size: 0.68rem;
   transition: top 0.4s ease-in-out;
 }
 
 .card:hover+.card2 .lower {
   top: 142px;
-  /* just below front card bottom edge */
 }
 
 .bioText {
@@ -171,16 +168,13 @@
   white-space: nowrap;
 }
 
-/* ─── Card 3 — Dept badge strip at very bottom of card2 ─── */
-/* Positioned inside .lower so it travels with it on hover  */
+/* ─── Card 3 — Dept badge strip ─── */
 .card3 {
   position: absolute;
   width: 240px;
   height: 28px;
   left: -12px;
-  /* cancel lower's left: 12px → aligns with card2 edge */
   top: 138px;
-  /* 142 (lower) + 138 = 280px from card2 top; card2 = 310px */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,62 +189,117 @@
   text-transform: uppercase;
 }
 
-/* ─── Touch device overrides (@media hover: none) ─── */
-/* On touch screens, hover never fires — so we make the expanded panel
-   always visible and add :active tap feedback on the front card.        */
+/* ══════════════════════════════════════════════════
+   MOBILE CARD — completely separate flat design
+   Used on screens ≤1024px via useMediaQuery in TSX
+   ══════════════════════════════════════════════════ */
 
-@media (hover: none) {
-  /* Tap feedback on front card */
-  .card:active {
-    background-color: #C9996B;
-  }
-
-  .card:active .initialsBox {
-    background: rgba(28, 23, 20, 0.12);
-    border-color: rgba(28, 23, 20, 0.22);
-    color: #1C1714;
-  }
-
-  .card:active .memberRole {
-    color: #3A302C;
-  }
-
-  /* Grow cardm to contain the always-expanded card2 */
-  .cardm {
-    height: 310px;
-  }
-
-  /* Keep front card limited to 130px — override inset: 0 */
-  .card {
-    bottom: auto;
-    height: 130px;
-  }
-
-  /* Always expand card2 on touch devices */
-  .card2 {
-    height: 310px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  /* Always show lower section on touch devices */
-  .lower {
-    top: 142px;
-  }
+.mobileCard {
+  width: 100%;
+  background: #F0EBE6;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(28, 23, 20, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ─── Very small phones (≤480px) ─── */
-@media (max-width: 480px) {
-  .cardm {
-    width: 100%;
-    max-width: 340px;
-  }
+.mobileCard:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 8px rgba(28, 23, 20, 0.12);
+}
 
-  .card2 {
-    width: calc(100% - 10px);
-  }
+/* ── Header row: photo + name + role ── */
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem 0.85rem;
+  background: #EDE9E6;
+}
 
-  .card3 {
-    width: calc(100% - 10px);
-  }
+.mobileInitialsBox {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  background: rgba(92, 118, 109, 0.12);
+  border: 1.5px solid rgba(92, 118, 109, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #5C766D;
+  font-family: var(--font-display);
+  overflow: hidden;
+}
+
+.mobileInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileName {
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: var(--font-display);
+  color: #1C1714;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobileRole {
+  font-size: 0.6rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #5C766D;
+  margin-top: 2px;
+}
+
+/* ── Body: bio + skills ── */
+.mobileBody {
+  padding: 0.85rem 1.1rem 0.9rem;
+}
+
+.mobileBio {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: #5C4F4A;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.mobileSkillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.mobileSkillTag {
+  padding: 3px 8px;
+  border-radius: 100px;
+  background: rgba(92, 118, 109, 0.12);
+  border: 1px solid rgba(92, 118, 109, 0.28);
+  color: #5C766D;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ── Footer dept badge ── */
+.mobileDept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  background: #5C766D;
+  color: #EDE9E6;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }

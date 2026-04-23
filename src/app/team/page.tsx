@@ -58,11 +58,10 @@ function NodeNetwork() {
   );
 }
 
-/* ─── Member Card (weather-expand mechanic preserved) ─── */
-function MemberCard({ member, index }: { member: Member; index: number }) {
+/* ─── Desktop Member Card — original weather-expand mechanic ─── */
+function DesktopMemberCard({ member, index }: { member: Member; index: number }) {
   const [imgError, setImgError] = useState(false);
   const handleImgError = useCallback(() => setImgError(true), []);
-
   const showPhoto = member.avatar && !imgError;
 
   return (
@@ -71,58 +70,83 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.75, delay: (index % 4) * 0.07, ease: [0.16, 1, 0.3, 1] }}
+      style={{ height: 320 }}
       className="flex items-start"
     >
       <div className={s.cardm}>
-        {/* ── Front Card ── */}
         <div className={s.card}>
           <div className={s.initialsBox}>
             {showPhoto ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={member.avatar}
-                alt={member.name}
-                onError={handleImgError}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "10px",
-                  display: "block",
-                }}
+              <img src={member.avatar} alt={member.name} onError={handleImgError}
+                style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "10px", display: "block" }}
               />
-            ) : (
-              member.initials
-            )}
+            ) : member.initials}
           </div>
           <div className={s.cardInfo}>
             <span className={s.memberName}>{member.name}</span>
             <span className={s.memberRole}>{member.role}</span>
           </div>
         </div>
-
-        {/* ── Expandable Panel ── */}
         <div className={s.card2}>
           <div className={s.upper}>
-            <div className={s.colItem}>
-              <span className={s.colIcon}>⚙</span>
-              <span>{member.department}<br />Dept.</span>
-            </div>
-            <div className={s.colItem}>
-              <span className={s.colIcon}>★</span>
-              <span>Skills<br />{member.skills.length}</span>
-            </div>
+            <div className={s.colItem}><span className={s.colIcon}>⚙</span><span>{member.department}<br />Dept.</span></div>
+            <div className={s.colItem}><span className={s.colIcon}>★</span><span>Skills<br />{member.skills.length}</span></div>
           </div>
           <div className={s.lower}>
             <p className={s.bioText}>{member.bio}</p>
             <div className={s.skillTags}>
-              {member.skills.map((skill) => (
-                <span key={skill} className={s.skillTag}>{skill}</span>
-              ))}
+              {member.skills.map((skill) => <span key={skill} className={s.skillTag}>{skill}</span>)}
             </div>
             <div className={s.card3}>{member.department}</div>
           </div>
         </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ─── Mobile/Tablet Member Card — flat always-visible design ─── */
+function MobileMemberCard({ member, index }: { member: Member; index: number }) {
+  const [imgError, setImgError] = useState(false);
+  const handleImgError = useCallback(() => setImgError(true), []);
+  const showPhoto = member.avatar && !imgError;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6, delay: (index % 2) * 0.07, ease: [0.16, 1, 0.3, 1] }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className={s.mobileCard}>
+        {/* Header */}
+        <div className={s.mobileHeader}>
+          <div className={s.mobileInitialsBox}>
+            {showPhoto ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={member.avatar} alt={member.name} onError={handleImgError}
+                style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "10px", display: "block" }}
+              />
+            ) : member.initials}
+          </div>
+          <div className={s.mobileInfo}>
+            <p className={s.mobileName}>{member.name}</p>
+            <p className={s.mobileRole}>{member.role}</p>
+          </div>
+        </div>
+        {/* Body */}
+        <div className={s.mobileBody}>
+          <p className={s.mobileBio}>{member.bio}</p>
+          <div className={s.mobileSkillTags}>
+            {member.skills.map((skill) => (
+              <span key={skill} className={s.mobileSkillTag}>{skill}</span>
+            ))}
+          </div>
+        </div>
+        {/* Dept footer */}
+        <div className={s.mobileDept}>{member.department}</div>
       </div>
     </motion.div>
   );
@@ -250,7 +274,7 @@ export default function TeamPage() {
             viewport={{ once: true }}
             className="text-center font-mono text-xs text-text-muted/40 mb-10 tracking-widest uppercase"
           >
-            ↓ {isMobile ? "Tap" : "Hover"} to reveal
+            ↓ Hover to reveal
           </motion.p>
 
           <AnimatePresence mode="wait">
@@ -260,11 +284,17 @@ export default function TeamPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="flex flex-wrap justify-center gap-6"
+              className={
+                isMobile
+                  ? "grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  : "flex flex-wrap justify-center gap-6"
+              }
             >
-              {filtered.map((member, i) => (
-                <MemberCard key={member.id} member={member} index={i} />
-              ))}
+              {filtered.map((member, i) =>
+                isMobile
+                  ? <MobileMemberCard key={member.id} member={member} index={i} />
+                  : <DesktopMemberCard key={member.id} member={member} index={i} />
+              )}
             </motion.div>
           </AnimatePresence>
 
