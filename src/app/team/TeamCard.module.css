@@ -215,6 +215,17 @@
     color: #3A302C;
   }
 
+  /* Grow cardm to contain the always-expanded card2 */
+  .cardm {
+    height: 310px;
+  }
+
+  /* Keep front card limited to 130px — override inset: 0 */
+  .card {
+    bottom: auto;
+    height: 130px;
+  }
+
   /* Always expand card2 on touch devices */
   .card2 {
     height: 310px;

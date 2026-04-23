@@ -71,7 +71,6 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.75, delay: (index % 4) * 0.07, ease: [0.16, 1, 0.3, 1] }}
-      style={{ height: 320 }}
       className="flex items-start"
     >
       <div className={s.cardm}>
