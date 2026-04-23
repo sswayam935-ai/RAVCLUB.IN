@@ -194,3 +194,52 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+/* ─── Touch device overrides (@media hover: none) ─── */
+/* On touch screens, hover never fires — so we make the expanded panel
+   always visible and add :active tap feedback on the front card.        */
+
+@media (hover: none) {
+  /* Tap feedback on front card */
+  .card:active {
+    background-color: #C9996B;
+  }
+
+  .card:active .initialsBox {
+    background: rgba(28, 23, 20, 0.12);
+    border-color: rgba(28, 23, 20, 0.22);
+    color: #1C1714;
+  }
+
+  .card:active .memberRole {
+    color: #3A302C;
+  }
+
+  /* Always expand card2 on touch devices */
+  .card2 {
+    height: 310px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  /* Always show lower section on touch devices */
+  .lower {
+    top: 142px;
+  }
+}
+
+/* ─── Very small phones (≤480px) ─── */
+@media (max-width: 480px) {
+  .cardm {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .card2 {
+    width: calc(100% - 10px);
+  }
+
+  .card3 {
+    width: calc(100% - 10px);
+  }
+}

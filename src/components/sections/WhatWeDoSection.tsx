@@ -68,6 +68,7 @@ export default function WhatWeDoSection() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               whileHover={{ y: -8 }}
+              whileTap={{ scale: 0.97 }}
               className="glass rounded-2xl p-7 group border border-white/5 hover:border-accent-cyan/20 transition-all duration-300"
             >
               <div className="text-4xl mb-5">{area.icon}</div>

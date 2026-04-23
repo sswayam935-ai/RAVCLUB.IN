@@ -36,7 +36,7 @@ export default function HeroSection() {
       {/* Scroll-driven content */}
       <motion.div
         style={{ opacity, scale }}
-        className="relative z-10 text-center px-6 max-w-7xl mx-auto pt-20"
+        className="relative z-10 text-center px-4 md:px-6 max-w-7xl mx-auto pt-12 md:pt-20"
       >
         {/* Eyebrow Label */}
         <motion.div
@@ -59,7 +59,7 @@ export default function HeroSection() {
             {words.map((word, wi) => (
               <motion.span
                 key={wi}
-                className="inline-block font-display font-black leading-none mr-4 last:mr-0"
+                className="inline-block font-display font-black leading-none mr-2 sm:mr-4 last:mr-0"
                 style={{
                   fontSize: "clamp(2.5rem, 10vw, 9rem)",
                   letterSpacing: "-0.02em",

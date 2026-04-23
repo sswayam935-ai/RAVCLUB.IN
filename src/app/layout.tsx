@@ -46,7 +46,8 @@ export default function RootLayout({
 
         <SmoothScrollProvider>
           <Navbar />
-          <main>{children}</main>
+          {/* Add padding for mobile header */}
+          <main className="sm:mt-0 mt-16">{children}</main>
         </SmoothScrollProvider>
       </body>
     </html>

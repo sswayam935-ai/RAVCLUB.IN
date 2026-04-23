@@ -254,3 +254,23 @@ body {
   border-color: rgba(237, 233, 230, 0.2);
   color: var(--accent-green);
 }
+
+/* ─── Mobile — tighter section padding on very small phones ─── */
+@media (max-width: 480px) {
+  .section-padding {
+    padding: 4rem 1rem;
+  }
+
+  /* Reduce marquee card width on very small screens */
+  .marquee-card-sm {
+    width: 260px !important;
+  }
+}
+
+/* ─── Touch devices — tap feedback for glass cards ─── */
+@media (hover: none) {
+  .glass:active {
+    background: rgba(55, 46, 42, 0.85);
+    border-color: rgba(201, 153, 107, 0.2);
+  }
+}

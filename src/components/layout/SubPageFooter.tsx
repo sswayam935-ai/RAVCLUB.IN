@@ -102,7 +102,7 @@ export default function SubPageFooter({ pageName }: SubPageFooterProps) {
                   </span>
                   <span
                     className="font-display font-bold transition-colors duration-300 group-hover:text-text-primary"
-                    style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", letterSpacing: "-0.03em", lineHeight: 1 }}
+                    style={{ fontSize: "clamp(1.8rem, 5vw, 2.4rem)", letterSpacing: "-0.03em", lineHeight: 1 }}
                   >
                     {link.label}
                   </span>

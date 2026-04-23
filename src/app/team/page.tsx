@@ -7,6 +7,7 @@ import SubPageFooter from "@/components/layout/SubPageFooter";
 import s from "./TeamCard.module.css";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { AlternatingTitle } from "@/components/ui/AlternatingTitle";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 type Member = (typeof teamData.members)[number];
 
@@ -132,6 +133,7 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
 export default function TeamPage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [activeFilter, setActiveFilter] = useState("All");
+  const isMobile = useMediaQuery("(hover: none)");
 
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const yParallax = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
@@ -249,7 +251,7 @@ export default function TeamPage() {
             viewport={{ once: true }}
             className="text-center font-mono text-xs text-text-muted/40 mb-10 tracking-widest uppercase"
           >
-            ↓ Hover to reveal
+            ↓ {isMobile ? "Tap" : "Hover"} to reveal
           </motion.p>
 
           <AnimatePresence mode="wait">

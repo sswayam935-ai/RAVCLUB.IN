@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import {
   motion,
   useScroll,
@@ -43,8 +44,8 @@ const panels = [
 const N = panels.length;
 const SCROLL_END = 0.75; // horizontal scroll completes at 75%, rest is dwell time on last panel
 
-/* ── Individual panel — owns its scroll-driven entrance animation ── */
-function Panel({
+/* ── Desktop Panel — owns its scroll-driven entrance animation ── */
+function DesktopPanel({
   panel,
   index,
   scrollYProgress,
@@ -149,33 +150,172 @@ function Panel({
   );
 }
 
+/* ── Mobile/Tablet Panel — vertical scroll cards ── */
+function MobilePanel({
+  panel,
+  index,
+}: {
+  panel: (typeof panels)[0];
+  index: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="w-full min-h-screen flex flex-col justify-center px-6 py-20 md:px-12 relative"
+      style={{
+        borderBottom: "1px solid rgba(255,255,255,0.04)",
+      }}
+    >
+      {/* Grid lines - subtle */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(201,153,107,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,153,107,0.02) 1px,transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+
+      {/* Panel number */}
+      <div className="relative z-10 mb-6">
+        <span
+          className="font-mono text-xs tracking-[0.3em] uppercase"
+          style={{ color: "rgba(154,128,112,0.6)" }}
+        >
+          {panel.number} &mdash; {String(N).padStart(2, "0")}
+        </span>
+      </div>
+
+      {/* Big word */}
+      <div className="relative z-10 mb-4 overflow-hidden">
+        <h2
+          style={{
+            color: panel.accent,
+            letterSpacing: "-0.04em",
+            fontSize: "clamp(2.5rem, 8vw, 4.5rem)",
+          }}
+          className="font-display font-black leading-none"
+        >
+          {panel.word}
+        </h2>
+      </div>
+
+      {/* Sub-label */}
+      <div className="relative z-10 mb-6">
+        <p
+          className="font-mono text-sm tracking-widest uppercase"
+          style={{ color: panel.accent, opacity: 0.7 }}
+        >
+          {panel.sub}
+        </p>
+      </div>
+
+      {/* Description */}
+      <div className="relative z-10 mb-8">
+        <p
+          className="font-body text-base leading-relaxed max-w-md"
+          style={{ color: "#9A8070" }}
+        >
+          {panel.desc}
+        </p>
+      </div>
+
+      {/* Decorative line */}
+      <div
+        className="relative z-10 h-px w-20 overflow-hidden"
+        style={{ background: "rgba(255,255,255,0.06)" }}
+      >
+        <div
+          className="h-full w-full"
+          style={{ background: panel.accent }}
+        />
+      </div>
+    </motion.div>
+  );
+}
+
 export default function HorizontalScrollSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const isLargeScreen = useMediaQuery("(min-width: 1024px)");
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
   });
 
-  /* translate X: 0vw → -(N-1)*100vw — finishes early to give last panel dwell time */
+  /* translate X: 0vw → -(N-1)*100vw */
   const x = useTransform(
     scrollYProgress,
     [0, SCROLL_END],
     ["0vw", `${-(N - 1) * 100}vw`]
   );
 
-  /* Progress dots opacity + scale */
-  const dotProgress = (i: number) =>
-    useTransform(
-      scrollYProgress,
-      [(i / N) * SCROLL_END - 0.06, (i / N) * SCROLL_END + 0.06],
-      [0.25, 1]
-    );
+  /* Progress dots — pre-computed at top level (Rules of Hooks) */
+  const dot0 = useTransform(
+    scrollYProgress,
+    [(0 / N) * SCROLL_END - 0.06, (0 / N) * SCROLL_END + 0.06],
+    [0.25, 1]
+  );
+  const dot1 = useTransform(
+    scrollYProgress,
+    [(1 / N) * SCROLL_END - 0.06, (1 / N) * SCROLL_END + 0.06],
+    [0.25, 1]
+  );
+  const dot2 = useTransform(
+    scrollYProgress,
+    [(2 / N) * SCROLL_END - 0.06, (2 / N) * SCROLL_END + 0.06],
+    [0.25, 1]
+  );
+  const dot3 = useTransform(
+    scrollYProgress,
+    [(3 / N) * SCROLL_END - 0.06, (3 / N) * SCROLL_END + 0.06],
+    [0.25, 1]
+  );
+  const dotMotionValues = [dot0, dot1, dot2, dot3];
 
+  /* Scroll-hint opacity — pre-computed at top level */
+  const scrollHintOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
+
+  /* Single return — no conditional hook calls */
+  if (!isLargeScreen) {
+    // Mobile/Tablet vertical scroll layout
+    return (
+      <section className="relative w-full block lg:hidden">
+        {/* Eyebrow */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="sticky top-20 z-10 flex items-center gap-3 px-6 py-4 md:px-12 bg-background/80 backdrop-blur-sm"
+        >
+          <span className="h-px w-8" style={{ background: "#C9996B" }} />
+          <span
+            className="font-mono text-xs tracking-[0.3em] uppercase"
+            style={{ color: "#C9996B", fontFamily: "var(--font-mono)" }}
+          >
+            What we do
+          </span>
+        </motion.div>
+
+        {/* Vertical cards stack */}
+        <div className="w-full">
+          {panels.map((panel, i) => (
+            <MobilePanel key={i} panel={panel} index={i} />
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop horizontal scroll layout
   return (
     <section
       ref={containerRef}
       style={{ height: `${(N + 1) * 100}vh` }}
-      className="relative"
+      className="relative hidden lg:block"
     >
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen overflow-hidden">
@@ -199,7 +339,7 @@ export default function HorizontalScrollSection() {
         {/* Horizontal track */}
         <motion.div style={{ x }} className="flex h-full will-change-transform">
           {panels.map((panel, i) => (
-            <Panel
+            <DesktopPanel
               key={i}
               panel={panel}
               index={i}
@@ -213,7 +353,7 @@ export default function HorizontalScrollSection() {
           {panels.map((p, i) => (
             <motion.div
               key={i}
-              style={{ opacity: dotProgress(i), scale: dotProgress(i) }}
+              style={{ opacity: dotMotionValues[i], scale: dotMotionValues[i] }}
               className="rounded-full"
               aria-hidden
             >
@@ -231,9 +371,7 @@ export default function HorizontalScrollSection() {
 
         {/* Scroll hint — fades out as you scroll */}
         <motion.div
-          style={{
-            opacity: useTransform(scrollYProgress, [0, 0.12], [1, 0]),
-          }}
+          style={{ opacity: scrollHintOpacity }}
           className="absolute bottom-10 right-10 sm:right-20 flex items-center gap-2 z-10"
         >
           <span

@@ -8,17 +8,17 @@ export default function MarqueeSection() {
   const items = [...marquee.items, ...marquee.items];
 
   return (
-    <div className="relative py-10 overflow-hidden border-y border-white/5">
+    <div className="relative py-6 md:py-10 overflow-hidden border-y border-white/5">
       {/* Top track */}
-      <div className="relative overflow-hidden mb-4">
+      <div className="relative overflow-hidden mb-2 md:mb-4">
         <div className="marquee-track">
           {items.map((item, i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-6 px-6 font-display font-black text-2xl md:text-3xl tracking-tight text-text-primary/10 whitespace-nowrap uppercase"
+              className="inline-flex items-center gap-3 md:gap-6 px-3 md:px-6 font-display font-black text-xs sm:text-lg md:text-3xl tracking-tight text-text-primary/10 whitespace-nowrap uppercase"
             >
               {item}
-              <span className="text-accent-cyan text-lg">✦</span>
+              <span className="text-accent-cyan text-sm md:text-lg">✦</span>
             </span>
           ))}
         </div>
@@ -30,10 +30,10 @@ export default function MarqueeSection() {
           {items.map((item, i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-6 px-6 font-display font-black text-2xl md:text-3xl tracking-tight text-accent-cyan/10 whitespace-nowrap uppercase"
+              className="inline-flex items-center gap-3 md:gap-6 px-3 md:px-6 font-display font-black text-xs sm:text-lg md:text-3xl tracking-tight text-accent-cyan/10 whitespace-nowrap uppercase"
             >
               {item}
-              <span className="text-accent-orange text-lg">◆</span>
+              <span className="text-accent-orange text-sm md:text-lg">◆</span>
             </span>
           ))}
         </div>

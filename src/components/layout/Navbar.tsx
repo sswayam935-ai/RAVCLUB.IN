@@ -120,8 +120,8 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Animated Pill Nav ── */}
-      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+      {/* ── Desktop Animated Pill Nav ── */}
+      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden sm:block">
         <motion.nav
           initial={{ y: -80, opacity: 0 }}
           animate={isExpanded ? "expanded" : "collapsed"}
@@ -197,22 +197,6 @@ export default function Navbar() {
             </Link>
           </motion.div>
 
-          {/* Hamburger (mobile) — visible in expanded state */}
-          <motion.div variants={itemVariants} className={cn("pr-3 sm:hidden", !isExpanded && "pointer-events-none")}>
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setMobileOpen((v) => !v);
-              }}
-              className="flex flex-col gap-1.5 p-1"
-              aria-label="Toggle menu"
-            >
-              <motion.span animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }} className="block w-5 h-px bg-[#EDE9E6]" />
-              <motion.span animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }} className="block w-5 h-px bg-[#EDE9E6]" />
-              <motion.span animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }} className="block w-5 h-px bg-[#EDE9E6]" />
-            </button>
-          </motion.div>
-
           {/* Collapsed state — Menu icon overlay */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <motion.div variants={menuIconVariants} animate={isExpanded ? "expanded" : "collapsed"}>
@@ -222,46 +206,108 @@ export default function Navbar() {
         </motion.nav>
       </div>
 
+      {/* ── Mobile Header ── */}
+      <motion.header
+        className="fixed top-0 left-0 right-0 z-50 sm:hidden h-16 flex items-center justify-between px-4 border-b border-white/5"
+        style={{
+          background: "rgba(28,23,20,0.85)",
+          backdropFilter: "blur(8px)",
+        }}
+        initial={{ y: 0 }}
+      >
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-sm font-bold tracking-widest uppercase text-[#EDE9E6]"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          RAV Club
+        </Link>
+
+        {/* Hamburger Menu Button */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="flex flex-col gap-1.5 p-2 -mr-2"
+          aria-label="Toggle menu"
+        >
+          <motion.span
+            animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+            className="block w-6 h-0.5 bg-[#EDE9E6]"
+          />
+          <motion.span
+            animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
+            className="block w-6 h-0.5 bg-[#EDE9E6]"
+          />
+          <motion.span
+            animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+            className="block w-6 h-0.5 bg-[#EDE9E6]"
+          />
+        </button>
+      </motion.header>
+
       {/* ── Mobile Full-screen Menu ── */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: "0%" }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 sm:hidden"
-            style={{ background: "rgba(28,23,20,0.96)", backdropFilter: "blur(24px)" }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed top-16 left-0 right-0 z-40 sm:hidden flex flex-col gap-1 px-4 py-6 border-b border-white/5"
+            style={{ background: "rgba(28,23,20,0.95)", backdropFilter: "blur(8px)" }}
           >
             {navLinks.map((link, i) => (
               <motion.div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.08 + i * 0.07 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.04 + i * 0.05 }}
               >
                 <Link
                   href={link.href}
-                  className="font-display text-4xl font-bold tracking-tight transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-4 py-3 rounded-lg font-mono text-sm tracking-widest uppercase transition-all"
                   style={{
-                    color: pathname === link.href ? "#C9996B" : "#EDE9E6",
-                    fontFamily: "var(--font-display)",
+                    color: pathname === link.href ? "#C9996B" : "#9A8070",
+                    background: pathname === link.href ? "rgba(201,153,107,0.1)" : "transparent",
                   }}
                 >
                   {link.label}
                 </Link>
               </motion.div>
             ))}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.36 }}>
+
+            <motion.div
+              className="mt-4 pt-4 border-t border-white/10"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.24 }}
+            >
               <Link
                 href="/contact"
-                className="px-8 py-3 rounded-full font-mono tracking-widest uppercase text-sm font-bold"
-                style={{ background: "#C9996B", color: "#1C1714", fontFamily: "var(--font-mono)" }}
+                onClick={() => setMobileOpen(false)}
+                className="block px-4 py-3 rounded-lg font-mono tracking-widest uppercase text-sm font-bold text-center"
+                style={{ background: "#C9996B", color: "#1C1714" }}
               >
                 Join Us
               </Link>
             </motion.div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Original Mobile Full-screen Menu (keeping for reference) ── */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-30 sm:hidden"
+            style={{ background: "rgba(0,0,0,0.3)" }}
+            onClick={() => setMobileOpen(false)}
+          />
         )}
       </AnimatePresence>
     </>

@@ -211,3 +211,31 @@
   background: rgba(220, 155, 155, 0.1);
   color: #BA6B6B;
 }
+
+/* ─── Touch device overrides (@media hover: none) ─── */
+/* On touch screens the 3D flip never fires.
+   We skip the flip entirely: always show cardContent, always hide cardFront. */
+
+@media (hover: none) {
+  /* Tap feedback */
+  .card:active {
+    transform: scale(0.98);
+  }
+
+  /* Always show back face */
+  .cardContent {
+    transform: rotateX(0deg);
+  }
+
+  /* Always hide front face */
+  .cardFront {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Always show color bar at full opacity */
+  .colorBar {
+    opacity: 1;
+  }
+}
+
