@@ -10,19 +10,19 @@
 
 /* ─── Gallery photos — matches files in public/gallery/ ─── */
 const GALLERY_PHOTOS: { src: string; caption: string }[] = [
-  { src: "/gallery/1.jpg",                        caption: "Club Session"        },
-  { src: "/gallery/2.jpg",                        caption: "Build Day"           },
-  { src: "/gallery/3.jpg",                        caption: "Workshop"            },
-  { src: "/gallery/4.jpg",                        caption: "Competition"         },
-  { src: "/gallery/5.jpg",                        caption: "Engineering Lab"     },
-  { src: "/gallery/6.jpg",                        caption: "Team Work"           },
-  { src: "/gallery/7.jpg",                        caption: "Robot Testing"       },
-  { src: "/gallery/8.jpg",                        caption: "Drone Build"         },
-  { src: "/gallery/9.jpg",                        caption: "Soldering Session"   },
-  { src: "/gallery/10.jpeg",                      caption: "Circuit Assembly"    },
-  { src: "/gallery/11.jpg",                       caption: "Presentation Day"    },
-  { src: "/gallery/12.jpg",                       caption: "Late Night Lab"      },
-  { src: "/gallery/IMG_20260314_154150902.jpg",   caption: "Club in Action"      },
+  { src: "/gallery/1.jpg", caption: "" },
+  { src: "/gallery/2.jpg", caption: "" },
+  { src: "/gallery/3.jpg", caption: "" },
+  { src: "/gallery/4.jpg", caption: "" },
+  { src: "/gallery/5.jpg", caption: "" },
+  { src: "/gallery/6.jpg", caption: "" },
+  { src: "/gallery/7.jpg", caption: "" },
+  { src: "/gallery/8.jpg", caption: "" },
+  { src: "/gallery/9.jpg", caption: "" },
+  { src: "/gallery/10.jpeg", caption: "" },
+  { src: "/gallery/11.jpg", caption: "" },
+  { src: "/gallery/12.jpg", caption: "" },
+  { src: "/gallery/IMG_20260314_154150902.jpg", caption: "" },
 ];
 
 /* Duration grows with the number of photos so all are always visible */
@@ -113,12 +113,12 @@ function MarqueeRow({
             : `marquee ${DURATION} linear infinite`,
         }}
         onMouseEnter={(e) =>
-          ((e.currentTarget as HTMLDivElement).style.animationPlayState =
-            "paused")
+        ((e.currentTarget as HTMLDivElement).style.animationPlayState =
+          "paused")
         }
         onMouseLeave={(e) =>
-          ((e.currentTarget as HTMLDivElement).style.animationPlayState =
-            "running")
+        ((e.currentTarget as HTMLDivElement).style.animationPlayState =
+          "running")
         }
       >
         {doubled.map((photo, i) => (

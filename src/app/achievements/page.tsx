@@ -9,7 +9,7 @@ import {
   animate,
 } from "framer-motion";
 import achievementsData from "@/data/achievements.json";
-import SubPageFooter from "@/components/layout/SubPageFooter";
+import Footer from "@/components/layout/Footer";
 import { AlternatingTitle } from "@/components/ui/AlternatingTitle";
 
 type TimelineEntry = (typeof achievementsData.timeline)[number];
@@ -135,15 +135,18 @@ function TimelineCard({ entry, index }: { entry: TimelineEntry; index: number })
   );
 
   return (
-    <div className="grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-center">
+    <div className="relative pl-10 md:pl-0 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8 md:items-center">
       {/* Left slot */}
-      {isLeft ? cardContent : <div />}
+      <div className="hidden md:block">{isLeft ? cardContent : null}</div>
 
       {/* Centre dot */}
-      <TimelineDot color={accentColor[entry.category]} />
+      <div className="absolute left-0 top-8 md:static">
+        <TimelineDot color={accentColor[entry.category]} />
+      </div>
 
       {/* Right slot */}
-      {!isLeft ? cardContent : <div />}
+      <div className="md:hidden">{cardContent}</div>
+      <div className="hidden md:block">{!isLeft ? cardContent : null}</div>
     </div>
   );
 }
@@ -180,7 +183,7 @@ export default function AchievementsPage() {
               letterSpacing: "-0.04em",
             }}
           >
-            DOMINATE
+            DOMINANCE
           </span>
         </motion.div>
 
@@ -284,7 +287,7 @@ export default function AchievementsPage() {
       {/* ── Timeline ── */}
       <section className="section-padding px-6 relative">
         {/* Animated spine */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-px overflow-hidden pointer-events-none">
+        <div className="absolute left-12 md:left-1/2 top-0 bottom-0 w-px overflow-hidden pointer-events-none">
           <motion.div
             className="w-full h-full origin-top"
             style={{
@@ -305,7 +308,7 @@ export default function AchievementsPage() {
         </div>
       </section>
 
-      <SubPageFooter />
+      <Footer />
     </div>
   );
 }

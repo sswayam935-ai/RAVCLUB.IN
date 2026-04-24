@@ -11,68 +11,156 @@
   ],
   "timeline": [
     {
-      "id": "ach-1",
-      "year": "2024",
-      "title": "State Robotics Championship – 1st Place",
-      "description": "Our autonomous robot team secured first place at the State Robotics Championship, outperforming 40+ teams.",
+      "id": "ach-iitr-1",
+      "year": "2026",
+      "title": "IIT Roorkee – Nano Navigator",
+      "description": "Secured 1st place in Nano Navigator at IIT Roorkee, demonstrating precision autonomous navigation and control.",
       "category": "Competition",
-      "badge": "🏆 Gold"
+      "badge": " 1st • ₹60K"
     },
     {
-      "id": "ach-2",
-      "year": "2024",
-      "title": "Best AV Production — School Annual Day",
-      "description": "Awarded Best AV Production for our live multicam event coverage and edited highlight reel of the School Annual Day.",
-      "category": "AV",
-      "badge": "🎬 Best Production"
+      "id": "ach-iitr-2",
+      "year": "2025",
+      "title": "IIT Roorkee – Robo Soccer",
+      "description": "Secured 3rd place in Robo Soccer at IIT Roorkee, demonstrating multi-agent coordination, real-time control, and strategic gameplay.",
+      "category": "Robotics",
+      "badge": " 3rd • ₹30k"
     },
     {
-      "id": "ach-3",
-      "year": "2023",
-      "title": "National Science Innovation Prize – Finalist",
-      "description": "Reached the national finals with our autonomous waste-sorting robot project, recognized for innovation and technical depth.",
-      "category": "Innovation",
-      "badge": "🥈 Finalist"
+    "id": "ach-charusat-1",
+    "year": "2026",
+    "title": "Charusat – RC Car",
+    "description": "Secured 2nd place in RC Car competition at Charusat, highlighting precision driving, control tuning, and performance optimization.",
+    "category": "RC Systems",
+    "badge": " 2nd • ₹4k"
+  },
+  {
+    "id": "ach-itm-1",
+    "year": "2026",
+    "title": "ITM – RC Car",
+    "description": "Achieved 2nd place in RC Car racing at ITM, showcasing high-speed control, stability, and efficient mechanical design.",
+    "category": "RC Systems",
+    "badge": " 2nd • ₹8k"
+  },
+    {
+      "id": "ach-svnit-1",
+      "year": "2025",
+      "title": "SVNIT Mindbend – Maze Solver",
+      "description": "Secured 3rd place in Maze Solver at SVNIT Mindbend, demonstrating efficient path planning and autonomous navigation algorithms.",
+      "category": "Autonomous Robotics",
+      "badge": " 3rd • ₹6k"
     },
     {
-      "id": "ach-4",
-      "year": "2023",
-      "title": "Inter-School Coding Olympiad – 2nd Place",
-      "description": "Our software team placed 2nd in the Inter-School Coding Olympiad, competing against 80+ teams across the district.",
-      "category": "Competition",
-      "badge": "🥈 Silver"
+      "id": "ach-svnit-2",
+      "year": "2025",
+      "title": "SVNIT Mindbend – CosmoClench Bot",
+      "description": "Achieved 3rd place in CosmoClench Bot event, showcasing robotic manipulation and control precision under competitive conditions.",
+      "category": "Robotics",
+      "badge": " 3rd • ₹3k"
     },
     {
-      "id": "ach-5",
-      "year": "2022",
-      "title": "IoT Innovation Challenge – 1st Place",
-      "description": "Won first place for our smart classroom automation system at the district IoT Innovation Challenge.",
-      "category": "Innovation",
-      "badge": "🏆 Gold"
+      "id": "ach-svnit-3",
+      "year": "2025",
+      "title": "SVNIT Mindbend – RC Car",
+      "description": "Secured 2nd place in RC Car racing, demonstrating high-speed control, stability, and optimized mechanical performance.",
+      "category": "RC Systems",
+      "badge": "  2nd • ₹3k"
     },
     {
-      "id": "ach-6",
-      "year": "2022",
-      "title": "Best Club of the Year – School Award",
-      "description": "Recognized as the Best Club of the Year by school administration for contributions across robotics, AV, and community events.",
-      "category": "Recognition",
-      "badge": "⭐ Club Award"
+      "id": "ach-svnit-4",
+      "year": "2025",
+      "title": "SVNIT Mindbend – Robo Soccer",
+      "description": "Achieved 2nd place in Robo Soccer, highlighting multi-robot coordination, real-time control, and strategic gameplay execution.",
+      "category": "Robotics",
+      "badge": " 2nd • ₹10k"
     },
     {
-      "id": "ach-7",
-      "year": "2021",
-      "title": "Regional STEM Fair – Innovation Award",
-      "description": "Our remote-controlled terrain rover won the Innovation Award at the Regional STEM Fair.",
-      "category": "Competition",
-      "badge": "🏅 Innovation Award"
-    },
-    {
-      "id": "ach-8",
-      "year": "2020",
-      "title": "First Club Robotics Demo Day",
-      "description": "Successfully hosted our first internal Demo Day showcasing 5 projects to 200+ students and faculty.",
-      "category": "Milestone",
-      "badge": "🎯 Milestone"
-    }
+    "id": "ach-iitb-1",
+    "year": "2025",
+    "title": "IIT Bombay – CosmoClench Bot",
+    "description": "Secured 3rd place in CosmoClench Bot at IIT Bombay, demonstrating precise robotic manipulation and control under competitive conditions.",
+    "category": "Robotics",
+    "badge": " 3rd • ₹10k"
+  },
+  {
+    "id": "ach-prevoyance-1",
+    "year": "2025",
+    "title": "Prevoyance, Nirma – RC Car Sumo",
+    "description": "Secured 1st place in RC Car Sumo at Prevoyance, Nirma University, demonstrating high-power control, mechanical robustness, and competitive strategy.",
+    "category": "RC Systems",
+    "badge": " Winner • ₹15k"
+  }, 
+  {
+    "id": "ach-vic-1",
+    "year": "2025",
+    "title": "VIC Vadodara – AV Club Representation",
+    "description": "Represented the AV Club at VIC Vadodara with Hexapod and Maze Solver projects, showcasing real-world robotics applications and engaging with the innovation community.",
+    "category": "Representation",
+    "badge": " Projects Showcase"
+  },
+  {
+    "id": "ach-robofest-rover",
+    "year": "2025",
+    "title": "Robofest 5.0 – Autonomous Rover",
+    "description": "Developed and showcased an autonomous rover at Robofest 5.0, capable of terrain traversal, obstacle avoidance, and real-time navigation inspired by Mars rover systems.",
+    "category": "Autonomous Robotics",
+    "badge": " Rover System • ₹50k"
+  },
+  {
+    "id": "ach-robofest-swarm",
+    "year": "2025",
+    "title": "Robofest 5.0 – Swarm Robotics",
+    "description": "Developed and showcased a swarm robotics system at Robofest 5.0, focusing on multi-agent coordination, communication protocols, and decentralized control.",
+    "category": "Autonomous Robotics",
+    "badge": " Swarm System • ₹50k"
+  },
+  {
+  "id": "ach-ingenium-1",
+  "year": "2025",
+  "title": "Ingenium – Line Follower",
+  "description": "Secured 2nd place in Line Follower competition at Ahmedabad University, demonstrating precise path tracking and control system tuning.",
+  "category": "Autonomous Robotics",
+  "badge": " 2nd • ₹2k"
+},
+{
+  "id": "ach-vic-2",
+  "year": "2025",
+  "title": "Makers Fest (VIC) – Platinum Award",
+  "description": "Awarded Platinum recognition at Makers Fest (VIC, MSU) for outstanding project innovation and technical execution.",
+  "category": "Recognition",
+  "badge": " Platinum • ₹51k"
+},
+{
+  "id": "ach-robofest4-1",
+  "year": "2024",
+  "title": "Robofest 4.0 – Maze, Submarine & Hexapod",
+  "description": "Led multiple project teams at Robofest 4.0, Maze Solver, Submarine, and Hexapod systems , demonstrating versatility across autonomous navigation, aquatic robotics, and multi-legged locomotion.",
+  "category": "Robotics",
+  "badge": " Combined • ₹150k"
+},
+{
+  "id": "ach-fp25-1",
+  "year": "2025",
+  "title": "FP25 – Ballista",
+  "description": "Secured 1st place in Ballista event at FP25 (MSU), demonstrating precision targeting and mechanical system design.",
+  "category": "Robotics",
+  "badge": " 1st • ₹6k"
+},
+{
+  "id": "ach-fp25-2",
+  "year": "2025",
+  "title": "FP25 – Hydrothrust",
+  "description": "Achieved 1st and 2nd positions in Hydrothrust at FP25 (MSU), showcasing fluid-based propulsion and control mechanisms.",
+  "category": "Robotics",
+  "badge": " 1st & 2nd • ₹3.5k"
+},
+{
+  "id": "ach-fp25-3",
+  "year": "2025",
+  "title": "FP25 – Hydrex",
+  "description": "Secured 2nd place in Hydrex at FP25 (MSU), demonstrating efficient design and control in aquatic robotics systems.",
+  "category": "Robotics",
+  "badge": " 2nd • ₹1k"
+}
   ]
 }
