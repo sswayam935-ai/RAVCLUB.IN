@@ -9,7 +9,7 @@ import {
   animate,
 } from "framer-motion";
 import achievementsData from "@/data/achievements.json";
-import Footer from "@/components/layout/Footer";
+import SubPageFooter from "@/components/layout/SubPageFooter";
 import { AlternatingTitle } from "@/components/ui/AlternatingTitle";
 
 type TimelineEntry = (typeof achievementsData.timeline)[number];
@@ -308,7 +308,7 @@ export default function AchievementsPage() {
         </div>
       </section>
 
-      <Footer />
+      <SubPageFooter />
     </div>
   );
 }
